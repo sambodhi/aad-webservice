@@ -2,6 +2,7 @@
 package com.aad.ws.dto;
 
 public class AppDetails {
+	
 
 	private String name;
 	private String size;
