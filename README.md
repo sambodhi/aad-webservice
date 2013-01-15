@@ -1,4 +1,4 @@
 aad-webservice
 ==============
 
-webservices code repository
+webservices repository
