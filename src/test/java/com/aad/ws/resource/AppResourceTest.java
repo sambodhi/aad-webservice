@@ -26,6 +26,6 @@ public class AppResourceTest {
 			body("name", equalTo("survey")).
 			body("size", equalTo("50 MB")).
 		when().
-			get("/aad-ws/api/application/details/survey_app");
+			get("/aad-ws/api/application/details/getAppList");
 	}
 }
