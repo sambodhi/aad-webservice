@@ -24,47 +24,40 @@ public class AppResource {
 
 	@Autowired
 	private AppService appService;
-	private static ArrayList<String> files = new ArrayList<String>();
 	private static final Logger logger = Logger.getLogger(AppResource.class);
 	private static final String APPSDIR = "C:\\Users\\MConstantinides\\git\\aad-webservice\\Apps";
+	private ArrayList<AppDetails> appDetails = new ArrayList<AppDetails>();
 	
 	@GET
 	@Path("details/{appId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<AppDetails> getAppDetails(final @PathParam("appId") String id) {
 		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
-		ArrayList<AppDetails> appDetails = new ArrayList<AppDetails>();
 
-		printFnames(APPSDIR);
-		String desc = "";
-
-		for (int i = 0; i < files.size(); i++) {
-
-			AppDetails ap = new AppDetails();
-			ap.setName(files.get(i));
-			ap.setDescription("test");
-			ap.setSize("test1");
-			appDetails.add(ap);
-		
-		}
-
-		// stub
-		//appDetails.setName(id);
-		//appDetails.setDescription(desc);
-		//appDetails.setSize("50 MB");
+		listApps(APPSDIR);
+	
 		return appDetails;
 	}
 
-	public static void printFnames(String sDir) {
-		File[] faFiles = new File(sDir).listFiles();
+	
+	public void listApps(String appsDir) {
+		
+		File [] files = new File(appsDir).listFiles();
 
-		for (File file : faFiles) {
-			if (file.getName().matches("^(.*?)")) {
-				files.add(file.getAbsolutePath());
-				// System.out.println(file.getAbsolutePath());
+		for (File file : files) {
+			
+			AppDetails ap = new AppDetails();
+	
+			if (!file.isDirectory()) {
+				ap.setName(file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf("\\") + 1));
+				ap.setUrl(file.getAbsolutePath());
+				ap.setCategoryName(file.getParentFile().getAbsolutePath().substring(file.getParentFile().getAbsolutePath().lastIndexOf("\\") + 1));
+				ap.setDescription("test");
+				ap.setSize("test1");
+				appDetails.add(ap);			
 			}
-			if (file.isDirectory()) {
-				printFnames(file.getAbsolutePath());
+			else{				
+				listApps(file.getAbsolutePath());
 			}
 		}
 	}

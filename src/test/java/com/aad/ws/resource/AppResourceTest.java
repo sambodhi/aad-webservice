@@ -28,4 +28,6 @@ public class AppResourceTest {
 		when().
 			get("/aad-ws/api/application/details/getAppList");
 	}
+	
+	
 }

@@ -5,6 +5,8 @@ public class AppDetails {
 	
 
 	private String name;
+	private String url;
+	private String categoryName;
 	private String size;
 	private String description;
 	
@@ -13,6 +15,18 @@ public class AppDetails {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 	public String getSize() {
 		return size;
