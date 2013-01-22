@@ -4,6 +4,8 @@ import static com.jayway.restassured.RestAssured.expect;
 import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.io.File;
+
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
@@ -16,7 +18,7 @@ public class AppResourceTest {
 		RestAssured.port = 9999;
 	}
 	
-	@Test
+	/*@Test
 	public void testGetAppDetails() {
 		System.out.println("*********************** Integration test ***********************");
 		RestAssured.port = 9999;
@@ -27,7 +29,17 @@ public class AppResourceTest {
 			body("size", equalTo("50 MB")).
 		when().
 			get("/aad-ws/api/application/details/getAppList");
+	}*/
+	
+	@Test
+	public void testStoreApp() {
+		System.out.println("*********************** Integration test ***********************");
+		RestAssured.port = 9999;
+		given().
+			multiPart(new File("/Volumes/DevBox/MD_UML_169_no_install_mac/lib/activation.jar")).
+		expect().
+			statusCode(200).
+		when().
+			post("/aad-ws/api/application/upload");
 	}
-	
-	
 }
