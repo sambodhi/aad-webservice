@@ -11,13 +11,26 @@
                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
                         http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
 
+	<beans:bean 
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+ 		
+		<beans:property name="locations">
+			<beans:list>
+			    <beans:value>classpath:database.properties</beans:value>
+			    <beans:value>classpath:app.properties</beans:value>
+			</beans:list>
+		</beans:property> 
+	</beans:bean>
+	
 	<context:annotation-config />
 
 	<beans:bean
 		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 	<context:component-scan base-package="com.aad.ws.resource" />
 
-	<beans:bean id="appService" class="com.aad.ws.service.AppService" />
+	<beans:bean id="appService" class="com.aad.ws.service.AppService">
+		<beans:property name="storeAppPath" value="${aad.ws.store.app.path}"/>
+	</beans:bean>
 
 	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil" />
 	
@@ -28,9 +41,9 @@
 	<!-- bean to load datasource - jdbc pool -->
 
 	<beans:bean id="datasource" class="org.apache.tomcat.jdbc.pool.DataSource"
-		destroy-method="close" p:driverClassName="${jdbc.iws.db.driverClassName}"
-		p:url="${jdbc.iws.db.url}" p:username="${jdbc.iws.db.username}"
-		p:password="${jdbc.iws.db.password}" p:initialSize="10" p:minIdle="10"
+		destroy-method="close" p:driverClassName="${jdbc.db.driverClassName}"
+		p:url="${jdbc.db.url}" p:username="${jdbc.db.username}"
+		p:password="${jdbc.db.password}" p:initialSize="10" p:minIdle="10"
 		p:maxIdle="100" p:maxActive="100" p:maxWait="6000" p:jmxEnabled="true"
 		p:removeAbandoned="true" p:removeAbandonedTimeout="6000"
 		p:logAbandoned="true" p:testOnBorrow="true" p:testOnReturn="false"

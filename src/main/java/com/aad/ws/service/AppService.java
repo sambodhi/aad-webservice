@@ -18,8 +18,14 @@ public class AppService {
 	@Autowired
 	private ApplicationDAO appDao;
 	
+	private String storeAppPath;
+	
 	private static final Logger logger = Logger.getLogger(AppService.class);
 	
+	public void setStoreAppPath(String storeAppPath) {
+		this.storeAppPath = storeAppPath;
+	}
+
 	public void storeFile(String fileName,
 			InputStream uploadedInputStream, Application application) {
 		
@@ -36,7 +42,7 @@ public class AppService {
 			InputStream uploadedInputStream) {
 		
 		logger.debug("File being upload: "+ fileName);
-		String uploadedFileLocation = "/Users/macpro/Documents/UCL/AADGroupWS/"
+		String uploadedFileLocation = storeAppPath
 			+ fileName;
 		logger.debug("at location: "+ uploadedFileLocation);
 		// save it
@@ -50,8 +56,4 @@ public class AppService {
 		return uploadedFileLocation;
 	}
 	
-	
-	
-	
-
 }
