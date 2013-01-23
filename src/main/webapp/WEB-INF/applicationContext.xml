@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans:beans xmlns="http://www.springframework.org/schema/security"
-    xmlns:beans="http://www.springframework.org/schema/beans"
-    xmlns:util="http://www.springframework.org/schema/util"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:mvc="http://www.springframework.org/schema/mvc"
-    xmlns:context="http://www.springframework.org/schema/context"
-    xmlns:p="http://www.springframework.org/schema/p"
-    
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
     					http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
                         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
                         http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+	<context:annotation-config />
+
+	<beans:bean
+		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+	<context:component-scan base-package="com.aad.ws.resource" />
+
+	<beans:bean id="appService" class="com.aad.ws.service.AppService" />
+
+	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil" />
 	
-	<context:annotation-config /> 
+	<beans:bean id="application" class="com.aad.ws.domain.Application" />
 	
-	<beans:bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
-	<context:component-scan base-package="com.aad.ws.resource"/>  
+	<beans:bean id="appDao" class="com.aad.ws.dao.JDBCApplicationDAO" />
+
+	<!-- bean to load datasource - jdbc pool -->
+
+	<beans:bean id="datasource" class="org.apache.tomcat.jdbc.pool.DataSource"
+		destroy-method="close" p:driverClassName="${jdbc.iws.db.driverClassName}"
+		p:url="${jdbc.iws.db.url}" p:username="${jdbc.iws.db.username}"
+		p:password="${jdbc.iws.db.password}" p:initialSize="10" p:minIdle="10"
+		p:maxIdle="100" p:maxActive="100" p:maxWait="6000" p:jmxEnabled="true"
+		p:removeAbandoned="true" p:removeAbandonedTimeout="6000"
+		p:logAbandoned="true" p:testOnBorrow="true" p:testOnReturn="false"
+		p:testWhileIdle="false" p:useEquals="false" p:fairQueue="false"
+		p:timeBetweenEvictionRunsMillis="30000" p:minEvictableIdleTimeMillis="30000"
+		p:validationInterval="1800000" p:initSQL="SELECT 1" p:validationQuery="SELECT 1" />
+
+	<beans:bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<beans:constructor-arg index="0">
+			<beans:ref bean="datasource" />
+		</beans:constructor-arg>
+	</beans:bean>
 	
-	<beans:bean id="appService" class="com.aad.ws.service.AppService"/>
-	
-	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil"/>
 </beans:beans>

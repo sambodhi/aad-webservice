@@ -51,6 +51,106 @@
 		</dependency>
 
 		<dependency>
+
+			<groupId>org.springframework</groupId>
+
+			<artifactId>spring-core</artifactId>
+
+			<version>3.0.5.RELEASE</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.springframework</groupId>
+
+			<artifactId>spring-jdbc</artifactId>
+
+			<version>3.0.5.RELEASE</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.apache.tomcat</groupId>
+
+			<artifactId>tomcat-jdbc</artifactId>
+
+			<version>7.0.21</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.apache.tomcat</groupId>
+
+			<artifactId>tomcat-juli</artifactId>
+
+			<version>7.0.8</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.springframework</groupId>
+
+			<artifactId>spring-tx</artifactId>
+
+			<version>3.0.5.RELEASE</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.springframework</groupId>
+
+			<artifactId>spring-test</artifactId>
+
+			<version>3.0.6.RELEASE</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>net.sourceforge.jtds</groupId>
+
+			<artifactId>jtds</artifactId>
+
+			<version>1.2.4</version>
+
+			<type>jar</type>
+
+			<optional>false</optional>
+
+		</dependency>
+
+
+
+		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>2.2.2</version>
@@ -186,7 +286,7 @@
 			<artifactId>jersey-multipart</artifactId>
 			<version>1.8</version>
 		</dependency>
-		
+
 		<!-- Rest Assured Service Test -->
 		<dependency>
 			<groupId>com.jayway.restassured</groupId>
@@ -272,10 +372,14 @@
 						<type>standalone</type>
 						<home>target/tomcat6x/tom</home>
 						<properties>
-							<cargo.jvmargs>-XX:PermSize=256m -XX:MaxPermSize=512m
-								-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled
-								-Daad.ws.log.level.file=DEBUG  -Daad.ws.log.level.console=DEBUG
-								<!---Dtr.log.dir=/Volumes/Work/logs/ --></cargo.jvmargs>
+							<cargo.jvmargs>
+								-XX:PermSize=256m -XX:MaxPermSize=512m
+								-XX:+UseConcMarkSweepGC
+								-XX:+CMSClassUnloadingEnabled
+								-Daad.ws.log.level.file=DEBUG
+								-Daad.ws.log.level.console=DEBUG
+								<!---Dtr.log.dir=/Volumes/Work/logs/ -->
+							</cargo.jvmargs>
 							<cargo.servlet.port>9999</cargo.servlet.port>
 							<cargo.tomcat.ajp.port>9999</cargo.tomcat.ajp.port>
 						</properties>
@@ -300,7 +404,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat6-maven-plugin</artifactId>
@@ -310,7 +414,7 @@
 					<path>/aad-ws</path>
 					<addContextWarDependencies>true</addContextWarDependencies>
 				</configuration>
-			</plugin> 
+			</plugin>
 		</plugins>
 	</build>
 </project>

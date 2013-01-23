@@ -18,6 +18,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.aad.ws.domain.Application;
 import com.aad.ws.dto.AppDetails;
 import com.aad.ws.service.AppService;
 import com.sun.jersey.core.header.FormDataContentDisposition;
@@ -89,23 +90,24 @@ public class AppResource {
 			@FormDataParam("file") FormDataContentDisposition fileDetail,
 			@FormDataParam("name") String name,
 			@FormDataParam("description") String description,
-			@FormDataParam("type") String type,
-			@FormDataParam("category") String category,
+			@FormDataParam("type") int typeId,
+			@FormDataParam("category") int categoryId,
 			@FormDataParam("size") String size
 			) {
 
 		logger.debug("Parameters obtained from request: + " +
 				"name ="+ name +
 				"description =" + description +
-				"category =" + category +
-				"type =" + type +
+				"category =" + categoryId +
+				"type =" + typeId +
 				"size =" +size);
 		//TODO: validate request
 		
-		//save to file system
+		Application application = new Application(0, categoryId, typeId, name,  size, null, description);
+		logger.debug("Application params received from request: " + application);
+		
+		//appService.storeFile(fileName, uploadedInputStream, application);
 		String outputLoc = appService.uploadFile(fileDetail.getFileName(), uploadedInputStream);
-
-		//TODO: save to database
 		
 		return Response.status(200).entity(outputLoc).build();
 

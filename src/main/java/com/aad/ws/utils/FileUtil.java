@@ -24,4 +24,14 @@ public class FileUtil {
 		out.close();
 
 	}
+	
+	
+	public void createUserDir(final String src, final String dirName) throws IOException {
+	    final File homeDir = new File(src);
+	    final File dir = new File(homeDir, dirName);
+	    if (!dir.exists() && !dir.mkdirs()) {
+	        throw new IOException("Unable to create " + dir.getAbsolutePath());
+	    }
+	}
+	
 }
