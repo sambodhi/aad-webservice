@@ -26,7 +26,7 @@ public class JDBCApplicationDAO implements
 	private static final String CREATE_APPLICATION_QUERY = "insert into application"
 			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description)";
 	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId where app_id=:appId";
-	private static final String SELECT_APPLICATION_QUERY = "select * from apllication where app_id=:appId";
+	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
 
 	public Application createApplication(Application application) {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
