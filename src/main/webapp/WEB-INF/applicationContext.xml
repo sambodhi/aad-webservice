@@ -32,9 +32,9 @@
 		<beans:property name="storeAppPath" value="${aad.ws.store.app.path}"/>
 	</beans:bean>
 
-	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil" />
+	<beans:bean id="categoryService" class="com.aad.ws.service.CategoryService" />
 	
-	<beans:bean id="application" class="com.aad.ws.domain.Application" />
+	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil" />
 	
 	<beans:bean id="appDao" class="com.aad.ws.dao.JDBCApplicationDAO" />
 	

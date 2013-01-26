@@ -40,5 +40,11 @@ public class AppDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	@Override
+	public String toString() {
+		return "AppDetails [name=" + name + ", url=" + url + ", categoryName="
+				+ categoryName + ", size=" + size + ", description="
+				+ description + "]";
+	}
 
 }

@@ -9,6 +9,8 @@ public class Application {
 	private String appSize;
 	private String developrName;
 	private String description;
+	private String url;
+	
 	public int getAppId() {
 		return appId;
 	}
@@ -51,6 +53,12 @@ public class Application {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	public Application(int appId, int appCategId, int appTypeId,
 			String appName, String appSize, String developrName,
 			String description) {
@@ -63,6 +71,12 @@ public class Application {
 		this.developrName = developrName;
 		this.description = description;
 	}
+	
+	public Application(int appId) {
+		super();
+		this.appId = appId;
+	}
+		
 	public Application() {
 	}
 	

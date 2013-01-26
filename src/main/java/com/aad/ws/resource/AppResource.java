@@ -1,6 +1,5 @@
 package com.aad.ws.resource;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -26,62 +25,30 @@ import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 
 @Component
-// @Scope("request")
 @Path("/application")
 public class AppResource {
 
 	@Autowired
 	private AppService appService;
-	
 	private static final Logger logger = Logger.getLogger(AppResource.class);
-	private static final String APPSDIR = "C:\\Users\\MConstantinides\\git\\aad-webservice\\Apps";
-	private ArrayList<AppDetails> appDetails = new ArrayList<AppDetails>();
 	
 	@GET
-	@Path("details/{appId}")
+	@Path("{appId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public ArrayList<AppDetails> getAppDetails(final @PathParam("appId") String id) {
+	public AppDetails getAppInfo(final @PathParam("appId") int id) {
 		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
-
-		listApps(APPSDIR);
-	
-		return appDetails;
-	}
-
-	
-	public void listApps(String appsDir) {
+		//TODO:uncomment when database is accessible
+		//AppDetails app = appService.getAppDetails(id);
 		
-		File [] files = new File(appsDir).listFiles();
-
-		for (File file : files) {
-			
-			AppDetails ap = new AppDetails();
-	
-			if (!file.isDirectory()) {
-				ap.setName(file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf("\\") + 1));
-				ap.setUrl(file.getAbsolutePath());
-				ap.setCategoryName(file.getParentFile().getAbsolutePath().substring(file.getParentFile().getAbsolutePath().lastIndexOf("\\") + 1));
-				ap.setDescription("test");
-				ap.setSize("test1");
-				appDetails.add(ap);			
-			}
-			else{				
-				listApps(file.getAbsolutePath());
-			}
-		}
-	}
-	
-	/*@GET
-	@Path("details/{appId}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public ArrayList<AppDetails> storeApp(final @PathParam("appId") String id) {
-		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
-
-		listApps(APPSDIR);
-	
+		//remove it!
+		AppDetails appDetails = new AppDetails();
+		appDetails.setCategoryName("Maths");
+		appDetails.setDescription("maths app");
+		appDetails.setName("app1");
+		appDetails.setUrl("http://schoolware.cs.ucl.ac.uk/web/Apps/jshd-dj.jar");
+		
 		return appDetails;
-	}*/
-	
+	}
 	
 	@POST
 	@Path("/upload")
@@ -133,7 +100,6 @@ public class AppResource {
 		String outputLoc = appService.uploadFile(fileDetail.getFileName(), uploadedInputStream, null);
 		
 		return Response.status(201).entity(outputLoc).build();
-
 	}
 	
 }

@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
@@ -15,6 +16,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
 import com.aad.ws.domain.Application;
+import com.aad.ws.service.AppService;
 
 public class JDBCApplicationDAO implements
 		ApplicationDAO {
@@ -27,8 +29,13 @@ public class JDBCApplicationDAO implements
 			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description)";
 	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId where app_id=:appId";
 	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
+	
+	private static final String SELECT_APPLICATION_FOR_CATEGORY_QUERY = "select * from application where app_categ_id=:categId";
 
+	private static final Logger logger = Logger.getLogger(JDBCApplicationDAO.class);
+	
 	public Application createApplication(Application application) {
+		logger.debug("JDBCApplicationDAO >> createApplication >> application :" + application);
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		SqlParameterSource namedParameters = new BeanPropertySqlParameterSource(
 				application);
@@ -38,11 +45,12 @@ public class JDBCApplicationDAO implements
 					keyHolder);
 			if (keyHolder.getKey() != null) {
 				int id = keyHolder.getKey().intValue();
+				logger.debug("Generated id:" + id);
 				application.setAppId(id);
 				return application;
 			}
 		} catch (Throwable e) {
-			System.out.println("createApplication: error in creating new application" + e);
+			logger.error("createApplication: error in creating new application" + e.getMessage(), e);
 		}
 		return null;
 	}
@@ -65,17 +73,33 @@ public class JDBCApplicationDAO implements
 			// if (noOfRowsUpdated > 0)
 			// update successful
 		} catch (Throwable e) {
-			// log error
+			logger.error("updateApplication: error in updating application" + e.getMessage(), e);
 		}
 		return null;
 	}
 
+	
 	class ApplicationRowMapper implements RowMapper<Application> {
 		public Application mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Application application = new Application();
 			application.setAppId(rs.getInt("app_id"));
+			application.setAppCategId(rs.getInt("app_categ_id"));
+			application.setAppName(rs.getString("app_name"));
+			application.setAppTypeId(rs.getInt("app_type_id"));
+			application.setDescription(rs.getString("description"));
+			//application.setUrl(rs.getString("app_id"));
+			application.setDeveloprName(rs.getString("developer_name"));
 			return application;
 		}
+	}
+
+	public List<Application> getApplicationForCategory(int id) {
+		MapSqlParameterSource parameters = new MapSqlParameterSource();
+		parameters.addValue("categId", id);
+		List<Application> applicationList = this.jdbcTemplate.query(
+				SELECT_APPLICATION_FOR_CATEGORY_QUERY, parameters,
+				new ApplicationRowMapper());
+		return applicationList;
 	}
 
 }

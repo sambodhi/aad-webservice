@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 import com.jayway.restassured.RestAssured;
+import com.aad.ws.resource.IntegrationTest;
 
 @Category(IntegrationTest.class)
 public class AppResourceTest {
@@ -34,12 +35,23 @@ public class AppResourceTest {
 	@Test
 	public void testStoreApp() {
 		System.out.println("*********************** Integration test ***********************");
-		RestAssured.port = 9999;
 		given().
-			multiPart(new File("/Volumes/DevBox/MD_UML_169_no_install_mac/lib/activation.jar")).
+			multiPart(new File("jhall.jar")).
+			parameters("name", "mathsapp1", "description", "maths sample app", "type", "33", "category", "9009").
+		expect().
+			statusCode(201).
+		when().
+			post("/aad-ws/api/application/upload");
+	}
+	
+	
+	@Test
+	public void testGetApplicationDetails() {
+		given().
+			contentType("application/json; charset=UTF-16");
 		expect().
 			statusCode(200).
 		when().
-			post("/aad-ws/api/application/upload");
+			get("aad-ws/api/application/99988");
 	}
 }

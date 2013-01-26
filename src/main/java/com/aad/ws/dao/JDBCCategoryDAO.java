@@ -18,8 +18,10 @@ public class JDBCCategoryDAO implements CategoryDAO {
 	@Qualifier("jdbcTemplate")
 	private NamedParameterJdbcTemplate jdbcTemplate;
 	
-	private static final String SELECT_CATEGORY_QUERY = "select * from apllication where app_categ_id=:categId";
+	private static final String SELECT_CATEGORY_QUERY = "select * from app_category where app_categ_id=:categId";
 
+	private static final String SELECT_ALL_CATEGORY = "select * from app_category";
+	
 	public Category getCategory(int id) {
 		Category category = null;
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
@@ -40,5 +42,13 @@ public class JDBCCategoryDAO implements CategoryDAO {
 			category.setCategType(rs.getString("app_categ_type"));
 			return category;
 		}
+	}
+
+	public List<Category> getCategories() {
+		MapSqlParameterSource parameters = new MapSqlParameterSource();
+		List<Category> categories = this.jdbcTemplate.query(
+				SELECT_ALL_CATEGORY, parameters,
+				new CategoryRowMapper());
+		return categories;
 	}
 }
