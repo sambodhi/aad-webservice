@@ -38,7 +38,7 @@
 	
 	<beans:bean id="appDao" class="com.aad.ws.dao.JDBCApplicationDAO" />
 	
-	<beans:bean id="appCategory" class="com.aad.ws.dao.JDBCCategoryDAO" />
+	<beans:bean id="appCategoryDao" class="com.aad.ws.dao.JDBCCategoryDAO" />
 	
 	<beans:bean class="com.aad.ws.exception.InvalidAttributeMapper" scope="singleton" />
 
@@ -54,8 +54,8 @@
 		p:testWhileIdle="false" p:useEquals="false" p:fairQueue="false"
 		p:timeBetweenEvictionRunsMillis="30000" p:minEvictableIdleTimeMillis="30000"
 		p:validationInterval="1800000" p:initSQL="SELECT 1" p:validationQuery="SELECT 1" />
-	
-		
+	 
+
 	<beans:bean id="jdbcTemplate"
 		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
 		<beans:constructor-arg index="0">
