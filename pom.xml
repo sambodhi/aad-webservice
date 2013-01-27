@@ -294,6 +294,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- mysql driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+		
 		<!-- Log4j -->
 		<dependency>
 			<groupId>log4j</groupId>
