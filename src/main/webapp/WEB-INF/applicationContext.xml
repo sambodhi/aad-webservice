@@ -42,6 +42,7 @@
 	
 	<beans:bean class="com.aad.ws.exception.InvalidAttributeMapper" scope="singleton" />
 
+	<beans:bean id="typesService" class="com.aad.ws.service.TypesService" />
 	<!-- bean to load datasource - jdbc pool -->
 
 	<beans:bean id="datasource" class="org.apache.tomcat.jdbc.pool.DataSource"

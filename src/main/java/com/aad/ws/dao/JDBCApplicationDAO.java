@@ -26,7 +26,7 @@ public class JDBCApplicationDAO implements
 	private NamedParameterJdbcTemplate jdbcTemplate;
 
 	private static final String CREATE_APPLICATION_QUERY = "insert into application"
-			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description)";
+			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description)";
 	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId where app_id=:appId";
 	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
 	
@@ -39,6 +39,7 @@ public class JDBCApplicationDAO implements
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		SqlParameterSource namedParameters = new BeanPropertySqlParameterSource(
 				application);
+		application.setDeveloprName("Sammy");
 		try {
 
 			this.jdbcTemplate.update(CREATE_APPLICATION_QUERY, namedParameters,

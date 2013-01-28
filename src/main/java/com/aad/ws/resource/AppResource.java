@@ -69,7 +69,7 @@ public class AppResource {
 				", category =" + categoryId +
 				", type =" + typeId +
 				", fileDetail =" + fileDetail +
-				", fileData =" + uploadedInputStream +
+				", fileData (is null?) =" + (uploadedInputStream==null) +
 				", size =" +size);
 		
 		//validate request
@@ -96,8 +96,8 @@ public class AppResource {
 		logger.debug("Application params received from request: " + application);
 		
 		//TODO: this function must be used for saving app to database 
-		//appService.storeFile(fileName, uploadedInputStream, application);
-		String outputLoc = appService.uploadFile(fileDetail.getFileName(), uploadedInputStream, null);
+		String outputLoc = appService.storeFile(fileDetail.getFileName(), uploadedInputStream, application);
+		//String outputLoc = appService.uploadFile(fileDetail.getFileName(), uploadedInputStream, null);
 		
 		return Response.status(201).entity(outputLoc).build();
 	}

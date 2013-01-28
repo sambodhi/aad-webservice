@@ -37,7 +37,7 @@ public class AppResourceTest {
 		System.out.println("*********************** Integration test ***********************");
 		given().
 			multiPart(new File("jhall.jar")).
-			parameters("name", "mathsapp1", "description", "maths sample app", "type", "33", "category", "9009").
+			parameters("name", "mathsapp1", "description", "maths sample app", "type", "1", "category", "1", "size", "500 KB").
 		expect().
 			statusCode(201).
 		when().
@@ -52,6 +52,6 @@ public class AppResourceTest {
 		expect().
 			statusCode(200).
 		when().
-			get("aad-ws/api/application/99988");
+			get("aad-ws/api/application/1");
 	}
 }

@@ -36,7 +36,7 @@ public class AppService {
 		this.storeAppPath = storeAppPath;
 	}
 
-	public void storeFile(String fileName,
+	public String storeFile(String fileName,
 			InputStream uploadedInputStream, Application application) {
 		
 		//save to database
@@ -47,6 +47,7 @@ public class AppService {
 		String outputLoc = uploadFile(fileName, uploadedInputStream, category.getCategType());
 		
 		logger.debug("File copied to " + outputLoc);
+		return outputLoc;
 	}
 	
 	public String uploadFile(String fileName,
