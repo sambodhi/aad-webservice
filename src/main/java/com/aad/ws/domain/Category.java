@@ -21,4 +21,10 @@ public class Category {
 		this.categId = categId;
 	}
 
+	@Override
+	public String toString() {
+		return "Category [categId=" + categId + ", categType=" + categType
+				+ "]";
+	}
+
 }

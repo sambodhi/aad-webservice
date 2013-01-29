@@ -29,7 +29,7 @@ public class JDBCCategoryDAO implements CategoryDAO {
 		List<Category> categories = this.jdbcTemplate.query(
 				SELECT_CATEGORY_QUERY, parameters,
 				new CategoryRowMapper());
-		if(categories != null) {
+		if(categories != null && categories.size() > 0) {
 			category = categories.get(0);
 		}
 		return category;

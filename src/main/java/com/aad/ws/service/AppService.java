@@ -44,23 +44,28 @@ public class AppService {
 		
 		Category category = categoryDao.getCategory(application.getAppCategId());
 		//save to file system
-		String outputLoc = uploadFile(fileName, uploadedInputStream, category.getCategType());
+		String outputLoc = uploadFile(fileName, uploadedInputStream, category);
 		
 		logger.debug("File copied to " + outputLoc);
 		return outputLoc;
 	}
 	
 	public String uploadFile(String fileName,
-			InputStream uploadedInputStream, String category) {
+			InputStream uploadedInputStream, Category category) {
 		
 		logger.debug("File being upload: "+ fileName + " category: " + category);
-		if (StringUtils.isEmpty(category)){
-			category = "Default";
+		
+		String categType= null;
+		if(category != null)
+			categType= category.getCategType();
+		
+		if (StringUtils.isEmpty(categType)){
+			categType = "Default";
 		}
 		// save it
 		try {
 			//util.createUserDir(uploadedFileLocation, category);
-			return util.writeToFile(uploadedInputStream, storeAppPath, fileName, category);
+			return util.writeToFile(uploadedInputStream, storeAppPath, fileName, categType);
 		} catch (IOException e) {
 			logger.error("Error occurred while uploading file",e);
 		}

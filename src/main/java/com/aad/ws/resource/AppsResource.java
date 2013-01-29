@@ -32,28 +32,28 @@ public class AppsResource {
 	public AppCollection getAppsForCategory(final @PathParam("categoryId") int id) {
 		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
 		//TODO:uncomment when database is accessible
-		//AppCollection appsCol = appService.getAppsForCategory(id);
+		AppCollection appsCol = appService.getAppsForCategory(id);
 		
 		
 		//remove it!
-		AppDetails appDetails = new AppDetails();
-		appDetails.setCategoryName("Maths");
-		appDetails.setDescription("maths app");
-		appDetails.setName("app1");
-		appDetails.setUrl("http://schoolware.cs.ucl.ac.uk/web/Apps/jshd-dj.jar");
+//		AppDetails appDetails = new AppDetails();
+//		appDetails.setCategoryName("Maths");
+//		appDetails.setDescription("maths app");
+//		appDetails.setName("app1");
+//		appDetails.setUrl("http://schoolware.cs.ucl.ac.uk/web/Apps/jshd-dj.jar");
+//		
+//		AppDetails appDetails1 = new AppDetails();
+//		appDetails1.setCategoryName("Maths");
+//		appDetails1.setDescription("maths app");
+//		appDetails1.setName("app1");
+//		appDetails1.setUrl("http://schoolware.cs.ucl.ac.uk/web/Apps/jshd-dj.jar");
+//		
+//		List<AppDetails> apps = new ArrayList<AppDetails>();
+//		apps.add(appDetails);
+//		apps.add(appDetails1);
+//		AppCollection appCol = new AppCollection();
+//		appCol.setApps(apps);
 		
-		AppDetails appDetails1 = new AppDetails();
-		appDetails1.setCategoryName("Maths");
-		appDetails1.setDescription("maths app");
-		appDetails1.setName("app1");
-		appDetails1.setUrl("http://schoolware.cs.ucl.ac.uk/web/Apps/jshd-dj.jar");
-		
-		List<AppDetails> apps = new ArrayList<AppDetails>();
-		apps.add(appDetails);
-		apps.add(appDetails1);
-		AppCollection appCol = new AppCollection();
-		appCol.setApps(apps);
-		
-		return appCol;
+		return appsCol;
 	}
 }

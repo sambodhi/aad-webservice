@@ -26,19 +26,19 @@ public class CategoriesResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public CategoryCollection getCategories() {
 		//TODO: uncomment when database is reachable
-		//CategoryCollection col = categoryService.getCategories(); 
+		CategoryCollection col = categoryService.getCategories(); 
 		
 		//remove it!
-		Category cat1 = new Category();
-		cat1.setCategId(1212);
-		cat1.setCategType("Maths");
-		Category cat2 = new Category();
-		cat2.setCategId(321);
-		cat2.setCategType("Science");
-		List<Category> categories = new ArrayList<Category>();
-		categories.add(cat1); categories.add(cat2);
-		CategoryCollection col = new CategoryCollection();
-		col.setCategories(categories);
+//		Category cat1 = new Category();
+//		cat1.setCategId(1212);
+//		cat1.setCategType("Maths");
+//		Category cat2 = new Category();
+//		cat2.setCategId(321);
+//		cat2.setCategType("Science");
+//		List<Category> categories = new ArrayList<Category>();
+//		categories.add(cat1); categories.add(cat2);
+//		CategoryCollection col = new CategoryCollection();
+//		col.setCategories(categories);
 		
 		return col;
 	}
