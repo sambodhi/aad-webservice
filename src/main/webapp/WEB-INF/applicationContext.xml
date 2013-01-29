@@ -34,6 +34,8 @@
 
 	<beans:bean id="categoryService" class="com.aad.ws.service.CategoryService" />
 	
+	<beans:bean id="testsService" class="com.aad.ws.service.TestsService" />
+	
 	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil" />
 	
 	<beans:bean id="appDao" class="com.aad.ws.dao.JDBCApplicationDAO" />
