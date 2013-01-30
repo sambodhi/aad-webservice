@@ -46,6 +46,8 @@
 	
 	<beans:bean id="testsDao" class="com.aad.ws.dao.JDBCTestsDAO" />
 	<beans:bean id="typesDao" class="com.aad.ws.dao.JDBCTypesDAO" />
+	<beans:bean id="resultDao" class="com.aad.ws.dao.JDBCResultDAO" />
+	 <beans:bean id="resultService" class="com.aad.ws.service.submitResultService"/>
 	
 	<beans:bean id="appCategory" class="com.aad.ws.dao.JDBCCategoryDAO" />
 	
