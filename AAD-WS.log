@@ -1,0 +1,946 @@
+2013-01-30 16:52:59,849 AAD-WS  INFO ContextLoader:182 - Root WebApplicationContext: initialization started
+2013-01-30 16:52:59,912 AAD-WS  INFO XmlWebApplicationContext:447 - Refreshing Root WebApplicationContext: startup date [Wed Jan 30 16:52:59 GMT 2013]; root of context hierarchy
+2013-01-30 16:52:59,974 AAD-WS  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2013-01-30 16:52:59,974 AAD-WS DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2013-01-30 16:53:00,021 AAD-WS DEBUG PluggableSchemaResolver:140 - Loading schema mappings from [META-INF/spring.schemas]
+2013-01-30 16:53:00,021 AAD-WS DEBUG PluggableSchemaResolver:146 - Loaded schema mappings: {http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2013-01-30 16:53:00,036 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+2013-01-30 16:53:00,083 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+2013-01-30 16:53:00,099 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+2013-01-30 16:53:00,114 AAD-WS DEBUG DefaultBeanDefinitionDocumentReader:87 - Loading bean definitions
+2013-01-30 16:53:00,146 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0]
+2013-01-30 16:53:00,146 AAD-WS DEBUG DefaultNamespaceHandlerResolver:156 - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2013-01-30 16:53:00,177 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0]
+2013-01-30 16:53:00,208 AAD-WS DEBUG PathMatchingResourcePatternResolver:552 - Looking for matching resources in directory tree [D:\aad-webservice\target\classes\com\aad\ws\resource]
+2013-01-30 16:53:00,208 AAD-WS DEBUG PathMatchingResourcePatternResolver:614 - Searching directory [D:\aad-webservice\target\classes\com\aad\ws\resource] for files matching pattern [D:/aad-webservice/target/classes/com/aad/ws/resource/**/*.class]
+2013-01-30 16:53:00,208 AAD-WS DEBUG PathMatchingResourcePatternResolver:353 - Resolved location pattern [classpath*:com/aad/ws/resource/**/*.class] to resources [file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppsResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\CategoriesResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\ResultResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestsResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TypesResource.class]]
+2013-01-30 16:53:00,333 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppResource.class]
+2013-01-30 16:53:00,348 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppsResource.class]
+2013-01-30 16:53:00,348 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\CategoriesResource.class]
+2013-01-30 16:53:00,348 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\ResultResource.class]
+2013-01-30 16:53:00,348 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestResource.class]
+2013-01-30 16:53:00,348 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestsResource.class]
+2013-01-30 16:53:00,364 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TypesResource.class]
+2013-01-30 16:53:00,364 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [com.aad.ws.exception.InvalidAttributeMapper#0]
+2013-01-30 16:53:00,380 AAD-WS DEBUG XmlBeanDefinitionReader:185 - Loaded 27 bean definitions from location pattern [/WEB-INF/applicationContext.xml]
+2013-01-30 16:53:00,380 AAD-WS DEBUG XmlWebApplicationContext:461 - Bean factory for Root WebApplicationContext: org.springframework.beans.factory.support.DefaultListableBeanFactory@ab4bbe: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 16:53:00,442 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:00,442 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:00,473 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0' to allow for resolving potential circular references
+2013-01-30 16:53:00,536 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:00,536 AAD-WS  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [database.properties]
+2013-01-30 16:53:00,536 AAD-WS  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [app.properties]
+2013-01-30 16:53:00,536 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:00,536 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:00,551 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:00,551 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:00,614 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:00,629 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:00,629 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:00,629 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:00,629 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:00,629 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0' to allow for resolving potential circular references
+2013-01-30 16:53:00,629 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:00,629 AAD-WS DEBUG XmlWebApplicationContext:735 - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@1b78d60]
+2013-01-30 16:53:00,645 AAD-WS DEBUG XmlWebApplicationContext:759 - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@139a6a1]
+2013-01-30 16:53:00,645 AAD-WS DEBUG UiApplicationContextUtils:85 - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@16673fa]
+2013-01-30 16:53:00,645 AAD-WS  INFO DefaultListableBeanFactory:532 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@ab4bbe: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 16:53:00,645 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appResource'
+2013-01-30 16:53:00,660 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appResource'
+2013-01-30 16:53:00,676 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.AppResource]: AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppResource.appService
+2013-01-30 16:53:00,676 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,676 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appResource': AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppResource.appService
+2013-01-30 16:53:00,692 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appService'
+2013-01-30 16:53:00,692 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appService'
+2013-01-30 16:53:00,692 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.utils.FileUtil com.aad.ws.service.AppService.util
+2013-01-30 16:53:00,692 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.dao.ApplicationDAO com.aad.ws.service.AppService.appDao
+2013-01-30 16:53:00,692 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.AppService.categoryDao
+2013-01-30 16:53:00,692 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appService' to allow for resolving potential circular references
+2013-01-30 16:53:00,692 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.utils.FileUtil com.aad.ws.service.AppService.util
+2013-01-30 16:53:00,692 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'fileUtils'
+2013-01-30 16:53:00,692 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'fileUtils'
+2013-01-30 16:53:00,707 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'fileUtils' to allow for resolving potential circular references
+2013-01-30 16:53:00,707 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'fileUtils'
+2013-01-30 16:53:00,707 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'fileUtils'
+2013-01-30 16:53:00,707 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.dao.ApplicationDAO com.aad.ws.service.AppService.appDao
+2013-01-30 16:53:00,707 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appDao'
+2013-01-30 16:53:00,707 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appDao'
+2013-01-30 16:53:00,723 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCApplicationDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCApplicationDAO.jdbcTemplate
+2013-01-30 16:53:00,723 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appDao' to allow for resolving potential circular references
+2013-01-30 16:53:00,723 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCApplicationDAO.jdbcTemplate
+2013-01-30 16:53:00,723 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:00,723 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'jdbcTemplate'
+2013-01-30 16:53:00,738 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'datasource'
+2013-01-30 16:53:00,738 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'datasource'
+2013-01-30 16:53:00,754 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'datasource' to allow for resolving potential circular references
+2013-01-30 16:53:00,785 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'datasource'
+2013-01-30 16:53:00,801 AAD-WS DEBUG BeanUtils:410 - No property editor [org.springframework.jdbc.core.JdbcOperationsEditor] found for type org.springframework.jdbc.core.JdbcOperations according to 'Editor' suffix convention
+2013-01-30 16:53:00,832 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'jdbcTemplate' to allow for resolving potential circular references
+2013-01-30 16:53:00,832 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'jdbcTemplate'
+2013-01-30 16:53:00,832 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:00,832 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appDao'
+2013-01-30 16:53:00,832 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'appDao'
+2013-01-30 16:53:00,832 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.AppService.categoryDao
+2013-01-30 16:53:00,832 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appCategory'
+2013-01-30 16:53:00,848 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appCategory'
+2013-01-30 16:53:00,848 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCCategoryDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCCategoryDAO.jdbcTemplate
+2013-01-30 16:53:00,848 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appCategory' to allow for resolving potential circular references
+2013-01-30 16:53:00,848 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appCategory': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCCategoryDAO.jdbcTemplate
+2013-01-30 16:53:00,848 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:00,848 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appCategory' to bean named 'jdbcTemplate'
+2013-01-30 16:53:00,848 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appCategory'
+2013-01-30 16:53:00,848 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'appCategory'
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appService'
+2013-01-30 16:53:00,863 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appResource' to bean named 'appService'
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appResource'
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appsResource'
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appsResource'
+2013-01-30 16:53:00,863 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.AppsResource]: AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppsResource.appService
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appsResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,863 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appsResource': AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppsResource.appService
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appService'
+2013-01-30 16:53:00,863 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appsResource' to bean named 'appService'
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appsResource'
+2013-01-30 16:53:00,863 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'categoriesResource'
+2013-01-30 16:53:00,879 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'categoriesResource'
+2013-01-30 16:53:00,879 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.CategoriesResource]: AutowiredFieldElement for private com.aad.ws.service.CategoryService com.aad.ws.resource.CategoriesResource.categoryService
+2013-01-30 16:53:00,879 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'categoriesResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,879 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'categoriesResource': AutowiredFieldElement for private com.aad.ws.service.CategoryService com.aad.ws.resource.CategoriesResource.categoryService
+2013-01-30 16:53:00,879 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'categoryService'
+2013-01-30 16:53:00,879 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'categoryService'
+2013-01-30 16:53:00,879 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.CategoryService]: AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.CategoryService.categoryDao
+2013-01-30 16:53:00,879 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'categoryService' to allow for resolving potential circular references
+2013-01-30 16:53:00,894 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'categoryService': AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.CategoryService.categoryDao
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appCategory'
+2013-01-30 16:53:00,894 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'categoryService' to bean named 'appCategory'
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'categoryService'
+2013-01-30 16:53:00,894 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'categoriesResource' to bean named 'categoryService'
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'categoriesResource'
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultResource'
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultResource'
+2013-01-30 16:53:00,894 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.ResultResource]: AutowiredFieldElement for private com.aad.ws.service.submitResultService com.aad.ws.resource.ResultResource.resultService
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,894 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultResource': AutowiredFieldElement for private com.aad.ws.service.submitResultService com.aad.ws.resource.ResultResource.resultService
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultService'
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultService'
+2013-01-30 16:53:00,894 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.submitResultService]: AutowiredFieldElement for private com.aad.ws.dao.ResultDAO com.aad.ws.service.submitResultService.resultDao
+2013-01-30 16:53:00,894 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultService' to allow for resolving potential circular references
+2013-01-30 16:53:00,910 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultService': AutowiredFieldElement for private com.aad.ws.dao.ResultDAO com.aad.ws.service.submitResultService.resultDao
+2013-01-30 16:53:00,910 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultDao'
+2013-01-30 16:53:00,910 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultDao'
+2013-01-30 16:53:00,910 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCResultDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCResultDAO.jdbcTemplate
+2013-01-30 16:53:00,910 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultDao' to allow for resolving potential circular references
+2013-01-30 16:53:00,926 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCResultDAO.jdbcTemplate
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:00,926 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultDao'
+2013-01-30 16:53:00,926 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultService' to bean named 'resultDao'
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultService'
+2013-01-30 16:53:00,926 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultResource' to bean named 'resultService'
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultResource'
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testResource'
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testResource'
+2013-01-30 16:53:00,926 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TestResource]: AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestResource.testsService
+2013-01-30 16:53:00,926 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,941 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testResource': AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestResource.testsService
+2013-01-30 16:53:00,941 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsService'
+2013-01-30 16:53:00,941 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsService'
+2013-01-30 16:53:00,941 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.TestsService]: AutowiredFieldElement for private com.aad.ws.dao.TestsDAO com.aad.ws.service.TestsService.testsDao
+2013-01-30 16:53:00,941 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsService' to allow for resolving potential circular references
+2013-01-30 16:53:00,941 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsService': AutowiredFieldElement for private com.aad.ws.dao.TestsDAO com.aad.ws.service.TestsService.testsDao
+2013-01-30 16:53:00,941 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsDao'
+2013-01-30 16:53:00,941 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsDao'
+2013-01-30 16:53:00,941 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCTestsDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTestsDAO.jdbcTemplate
+2013-01-30 16:53:00,941 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsDao' to allow for resolving potential circular references
+2013-01-30 16:53:00,957 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTestsDAO.jdbcTemplate
+2013-01-30 16:53:00,957 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:00,957 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:00,957 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsDao'
+2013-01-30 16:53:00,957 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsService' to bean named 'testsDao'
+2013-01-30 16:53:00,957 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsService'
+2013-01-30 16:53:00,957 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testResource' to bean named 'testsService'
+2013-01-30 16:53:00,957 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testResource'
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsResource'
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsResource'
+2013-01-30 16:53:00,972 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TestsResource]: AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestsResource.testsService
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,972 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsResource': AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestsResource.testsService
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsService'
+2013-01-30 16:53:00,972 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsResource' to bean named 'testsService'
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsResource'
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesResource'
+2013-01-30 16:53:00,972 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesResource'
+2013-01-30 16:53:00,988 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TypesResource]: AutowiredFieldElement for private com.aad.ws.service.TypesService com.aad.ws.resource.TypesResource.typesService
+2013-01-30 16:53:00,988 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesResource' to allow for resolving potential circular references
+2013-01-30 16:53:00,988 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesResource': AutowiredFieldElement for private com.aad.ws.service.TypesService com.aad.ws.resource.TypesResource.typesService
+2013-01-30 16:53:00,988 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesService'
+2013-01-30 16:53:00,988 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesService'
+2013-01-30 16:53:01,004 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.TypesService]: AutowiredFieldElement for private com.aad.ws.dao.TypesDAO com.aad.ws.service.TypesService.typesDao
+2013-01-30 16:53:01,004 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesService' to allow for resolving potential circular references
+2013-01-30 16:53:01,004 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesService': AutowiredFieldElement for private com.aad.ws.dao.TypesDAO com.aad.ws.service.TypesService.typesDao
+2013-01-30 16:53:01,004 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesDao'
+2013-01-30 16:53:01,004 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesDao'
+2013-01-30 16:53:01,004 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCTypesDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTypesDAO.jdbcTemplate
+2013-01-30 16:53:01,004 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesDao' to allow for resolving potential circular references
+2013-01-30 16:53:01,019 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTypesDAO.jdbcTemplate
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:01,019 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesDao'
+2013-01-30 16:53:01,019 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesService' to bean named 'typesDao'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesService'
+2013-01-30 16:53:01,019 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesResource' to bean named 'typesService'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesResource'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appService'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'categoryService'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsService'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'fileUtils'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appDao'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsDao'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesDao'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultDao'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultService'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appCategory'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:53:01,019 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'com.aad.ws.exception.InvalidAttributeMapper#0' to allow for resolving potential circular references
+2013-01-30 16:53:01,035 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:53:01,035 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesService'
+2013-01-30 16:53:01,035 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'datasource'
+2013-01-30 16:53:01,035 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:01,035 AAD-WS DEBUG XmlWebApplicationContext:786 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@9858f1]
+2013-01-30 16:53:01,035 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-01-30 16:53:01,035 AAD-WS DEBUG ContextLoader:197 - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2013-01-30 16:53:01,035 AAD-WS  INFO ContextLoader:202 - Root WebApplicationContext: initialization completed in 1186 ms
+2013-01-30 16:53:39,836 AAD-WS  INFO ContextLoader:182 - Root WebApplicationContext: initialization started
+2013-01-30 16:53:39,898 AAD-WS  INFO XmlWebApplicationContext:447 - Refreshing Root WebApplicationContext: startup date [Wed Jan 30 16:53:39 GMT 2013]; root of context hierarchy
+2013-01-30 16:53:39,961 AAD-WS  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2013-01-30 16:53:39,976 AAD-WS DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2013-01-30 16:53:40,008 AAD-WS DEBUG PluggableSchemaResolver:140 - Loading schema mappings from [META-INF/spring.schemas]
+2013-01-30 16:53:40,023 AAD-WS DEBUG PluggableSchemaResolver:146 - Loaded schema mappings: {http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2013-01-30 16:53:40,023 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+2013-01-30 16:53:40,070 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+2013-01-30 16:53:40,070 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+2013-01-30 16:53:40,086 AAD-WS DEBUG DefaultBeanDefinitionDocumentReader:87 - Loading bean definitions
+2013-01-30 16:53:40,117 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0]
+2013-01-30 16:53:40,117 AAD-WS DEBUG DefaultNamespaceHandlerResolver:156 - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2013-01-30 16:53:40,148 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0]
+2013-01-30 16:53:40,164 AAD-WS DEBUG PathMatchingResourcePatternResolver:552 - Looking for matching resources in directory tree [D:\aad-webservice\target\classes\com\aad\ws\resource]
+2013-01-30 16:53:40,164 AAD-WS DEBUG PathMatchingResourcePatternResolver:614 - Searching directory [D:\aad-webservice\target\classes\com\aad\ws\resource] for files matching pattern [D:/aad-webservice/target/classes/com/aad/ws/resource/**/*.class]
+2013-01-30 16:53:40,164 AAD-WS DEBUG PathMatchingResourcePatternResolver:353 - Resolved location pattern [classpath*:com/aad/ws/resource/**/*.class] to resources [file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppsResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\CategoriesResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\ResultResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestsResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TypesResource.class]]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppResource.class]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppsResource.class]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\CategoriesResource.class]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\ResultResource.class]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestResource.class]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestsResource.class]
+2013-01-30 16:53:40,288 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TypesResource.class]
+2013-01-30 16:53:40,304 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [com.aad.ws.exception.InvalidAttributeMapper#0]
+2013-01-30 16:53:40,304 AAD-WS DEBUG XmlBeanDefinitionReader:185 - Loaded 27 bean definitions from location pattern [/WEB-INF/applicationContext.xml]
+2013-01-30 16:53:40,304 AAD-WS DEBUG XmlWebApplicationContext:461 - Bean factory for Root WebApplicationContext: org.springframework.beans.factory.support.DefaultListableBeanFactory@1711f30: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 16:53:40,351 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:40,351 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:40,382 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0' to allow for resolving potential circular references
+2013-01-30 16:53:40,413 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:40,429 AAD-WS  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [database.properties]
+2013-01-30 16:53:40,429 AAD-WS  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [app.properties]
+2013-01-30 16:53:40,429 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:40,429 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:40,444 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:40,444 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:40,491 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:40,507 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 16:53:40,507 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:40,507 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:40,507 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:40,507 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0' to allow for resolving potential circular references
+2013-01-30 16:53:40,507 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:40,507 AAD-WS DEBUG XmlWebApplicationContext:735 - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@a63b21]
+2013-01-30 16:53:40,507 AAD-WS DEBUG XmlWebApplicationContext:759 - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@15558ce]
+2013-01-30 16:53:40,522 AAD-WS DEBUG UiApplicationContextUtils:85 - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@8dd96c]
+2013-01-30 16:53:40,522 AAD-WS  INFO DefaultListableBeanFactory:532 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1711f30: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appResource'
+2013-01-30 16:53:40,522 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appResource'
+2013-01-30 16:53:40,538 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.AppResource]: AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppResource.appService
+2013-01-30 16:53:40,538 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,554 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appResource': AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppResource.appService
+2013-01-30 16:53:40,554 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appService'
+2013-01-30 16:53:40,554 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appService'
+2013-01-30 16:53:40,554 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.utils.FileUtil com.aad.ws.service.AppService.util
+2013-01-30 16:53:40,554 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.dao.ApplicationDAO com.aad.ws.service.AppService.appDao
+2013-01-30 16:53:40,554 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.AppService.categoryDao
+2013-01-30 16:53:40,554 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appService' to allow for resolving potential circular references
+2013-01-30 16:53:40,569 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.utils.FileUtil com.aad.ws.service.AppService.util
+2013-01-30 16:53:40,569 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'fileUtils'
+2013-01-30 16:53:40,569 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'fileUtils'
+2013-01-30 16:53:40,569 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'fileUtils' to allow for resolving potential circular references
+2013-01-30 16:53:40,569 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'fileUtils'
+2013-01-30 16:53:40,569 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'fileUtils'
+2013-01-30 16:53:40,569 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.dao.ApplicationDAO com.aad.ws.service.AppService.appDao
+2013-01-30 16:53:40,569 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appDao'
+2013-01-30 16:53:40,569 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appDao'
+2013-01-30 16:53:40,585 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCApplicationDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCApplicationDAO.jdbcTemplate
+2013-01-30 16:53:40,585 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appDao' to allow for resolving potential circular references
+2013-01-30 16:53:40,585 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCApplicationDAO.jdbcTemplate
+2013-01-30 16:53:40,585 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:40,585 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'jdbcTemplate'
+2013-01-30 16:53:40,600 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'datasource'
+2013-01-30 16:53:40,600 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'datasource'
+2013-01-30 16:53:40,616 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'datasource' to allow for resolving potential circular references
+2013-01-30 16:53:40,632 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'datasource'
+2013-01-30 16:53:40,647 AAD-WS DEBUG BeanUtils:410 - No property editor [org.springframework.jdbc.core.JdbcOperationsEditor] found for type org.springframework.jdbc.core.JdbcOperations according to 'Editor' suffix convention
+2013-01-30 16:53:40,678 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'jdbcTemplate' to allow for resolving potential circular references
+2013-01-30 16:53:40,678 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'jdbcTemplate'
+2013-01-30 16:53:40,678 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:40,678 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appDao'
+2013-01-30 16:53:40,678 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'appDao'
+2013-01-30 16:53:40,678 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.AppService.categoryDao
+2013-01-30 16:53:40,678 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appCategory'
+2013-01-30 16:53:40,678 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appCategory'
+2013-01-30 16:53:40,694 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCCategoryDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCCategoryDAO.jdbcTemplate
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appCategory' to allow for resolving potential circular references
+2013-01-30 16:53:40,694 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appCategory': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCCategoryDAO.jdbcTemplate
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:40,694 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appCategory' to bean named 'jdbcTemplate'
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appCategory'
+2013-01-30 16:53:40,694 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'appCategory'
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appService'
+2013-01-30 16:53:40,694 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appResource' to bean named 'appService'
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appResource'
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appsResource'
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appsResource'
+2013-01-30 16:53:40,694 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.AppsResource]: AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppsResource.appService
+2013-01-30 16:53:40,694 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appsResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,710 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appsResource': AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppsResource.appService
+2013-01-30 16:53:40,710 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appService'
+2013-01-30 16:53:40,710 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appsResource' to bean named 'appService'
+2013-01-30 16:53:40,710 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appsResource'
+2013-01-30 16:53:40,710 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'categoriesResource'
+2013-01-30 16:53:40,710 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'categoriesResource'
+2013-01-30 16:53:40,710 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.CategoriesResource]: AutowiredFieldElement for private com.aad.ws.service.CategoryService com.aad.ws.resource.CategoriesResource.categoryService
+2013-01-30 16:53:40,710 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'categoriesResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,725 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'categoriesResource': AutowiredFieldElement for private com.aad.ws.service.CategoryService com.aad.ws.resource.CategoriesResource.categoryService
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'categoryService'
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'categoryService'
+2013-01-30 16:53:40,725 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.CategoryService]: AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.CategoryService.categoryDao
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'categoryService' to allow for resolving potential circular references
+2013-01-30 16:53:40,725 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'categoryService': AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.CategoryService.categoryDao
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appCategory'
+2013-01-30 16:53:40,725 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'categoryService' to bean named 'appCategory'
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'categoryService'
+2013-01-30 16:53:40,725 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'categoriesResource' to bean named 'categoryService'
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'categoriesResource'
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultResource'
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultResource'
+2013-01-30 16:53:40,725 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.ResultResource]: AutowiredFieldElement for private com.aad.ws.service.submitResultService com.aad.ws.resource.ResultResource.resultService
+2013-01-30 16:53:40,725 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,741 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultResource': AutowiredFieldElement for private com.aad.ws.service.submitResultService com.aad.ws.resource.ResultResource.resultService
+2013-01-30 16:53:40,741 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultService'
+2013-01-30 16:53:40,741 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultService'
+2013-01-30 16:53:40,741 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.submitResultService]: AutowiredFieldElement for private com.aad.ws.dao.ResultDAO com.aad.ws.service.submitResultService.resultDao
+2013-01-30 16:53:40,741 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultService' to allow for resolving potential circular references
+2013-01-30 16:53:40,741 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultService': AutowiredFieldElement for private com.aad.ws.dao.ResultDAO com.aad.ws.service.submitResultService.resultDao
+2013-01-30 16:53:40,756 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultDao'
+2013-01-30 16:53:40,756 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultDao'
+2013-01-30 16:53:40,756 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCResultDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCResultDAO.jdbcTemplate
+2013-01-30 16:53:40,756 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultDao' to allow for resolving potential circular references
+2013-01-30 16:53:40,756 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCResultDAO.jdbcTemplate
+2013-01-30 16:53:40,756 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:40,756 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultDao'
+2013-01-30 16:53:40,772 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultService' to bean named 'resultDao'
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultService'
+2013-01-30 16:53:40,772 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultResource' to bean named 'resultService'
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultResource'
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testResource'
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testResource'
+2013-01-30 16:53:40,772 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TestResource]: AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestResource.testsService
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,772 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testResource': AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestResource.testsService
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsService'
+2013-01-30 16:53:40,772 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsService'
+2013-01-30 16:53:40,788 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.TestsService]: AutowiredFieldElement for private com.aad.ws.dao.TestsDAO com.aad.ws.service.TestsService.testsDao
+2013-01-30 16:53:40,788 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsService' to allow for resolving potential circular references
+2013-01-30 16:53:40,788 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsService': AutowiredFieldElement for private com.aad.ws.dao.TestsDAO com.aad.ws.service.TestsService.testsDao
+2013-01-30 16:53:40,788 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsDao'
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsDao'
+2013-01-30 16:53:40,798 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCTestsDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTestsDAO.jdbcTemplate
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsDao' to allow for resolving potential circular references
+2013-01-30 16:53:40,798 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTestsDAO.jdbcTemplate
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:40,798 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsDao'
+2013-01-30 16:53:40,798 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsService' to bean named 'testsDao'
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsService'
+2013-01-30 16:53:40,798 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testResource' to bean named 'testsService'
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testResource'
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsResource'
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsResource'
+2013-01-30 16:53:40,798 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TestsResource]: AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestsResource.testsService
+2013-01-30 16:53:40,798 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,813 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsResource': AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestsResource.testsService
+2013-01-30 16:53:40,813 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsService'
+2013-01-30 16:53:40,813 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsResource' to bean named 'testsService'
+2013-01-30 16:53:40,813 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsResource'
+2013-01-30 16:53:40,813 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesResource'
+2013-01-30 16:53:40,813 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesResource'
+2013-01-30 16:53:40,813 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TypesResource]: AutowiredFieldElement for private com.aad.ws.service.TypesService com.aad.ws.resource.TypesResource.typesService
+2013-01-30 16:53:40,813 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesResource' to allow for resolving potential circular references
+2013-01-30 16:53:40,829 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesResource': AutowiredFieldElement for private com.aad.ws.service.TypesService com.aad.ws.resource.TypesResource.typesService
+2013-01-30 16:53:40,829 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesService'
+2013-01-30 16:53:40,829 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesService'
+2013-01-30 16:53:40,829 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.TypesService]: AutowiredFieldElement for private com.aad.ws.dao.TypesDAO com.aad.ws.service.TypesService.typesDao
+2013-01-30 16:53:40,829 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesService' to allow for resolving potential circular references
+2013-01-30 16:53:40,829 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesService': AutowiredFieldElement for private com.aad.ws.dao.TypesDAO com.aad.ws.service.TypesService.typesDao
+2013-01-30 16:53:40,829 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesDao'
+2013-01-30 16:53:40,829 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesDao'
+2013-01-30 16:53:40,829 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCTypesDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTypesDAO.jdbcTemplate
+2013-01-30 16:53:40,829 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesDao' to allow for resolving potential circular references
+2013-01-30 16:53:40,844 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTypesDAO.jdbcTemplate
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:40,844 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesDao' to bean named 'jdbcTemplate'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesDao'
+2013-01-30 16:53:40,844 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesService' to bean named 'typesDao'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesService'
+2013-01-30 16:53:40,844 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesResource' to bean named 'typesService'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesResource'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appService'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'categoryService'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsService'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'fileUtils'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appDao'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsDao'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesDao'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultDao'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultService'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appCategory'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:53:40,844 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'com.aad.ws.exception.InvalidAttributeMapper#0' to allow for resolving potential circular references
+2013-01-30 16:53:40,860 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:53:40,860 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesService'
+2013-01-30 16:53:40,860 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'datasource'
+2013-01-30 16:53:40,860 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 16:53:40,860 AAD-WS DEBUG XmlWebApplicationContext:786 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@af2320]
+2013-01-30 16:53:40,860 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-01-30 16:53:40,860 AAD-WS DEBUG ContextLoader:197 - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2013-01-30 16:53:40,860 AAD-WS  INFO ContextLoader:202 - Root WebApplicationContext: initialization completed in 1008 ms
+2013-01-30 16:56:28,059 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 16:56:29,067 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appResource'
+2013-01-30 16:56:29,069 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appsResource'
+2013-01-30 16:56:29,070 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'categoriesResource'
+2013-01-30 16:56:29,072 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultResource'
+2013-01-30 16:56:29,073 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testResource'
+2013-01-30 16:56:29,074 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsResource'
+2013-01-30 16:56:29,074 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesResource'
+2013-01-30 16:56:29,440 AAD-WS DEBUG ResultResource:35 - *******************10
+2013-01-30 16:56:29,441 AAD-WS DEBUG JDBCResultDAO:116 - Result :Results [totalquestions=10, totalmark=124.0, quesattended=1, overallscoreobtained=8, difficulty=Hard, appid=1, teststarttime=2013-01-25 19:35:29, testid=1359142529786, totaltime=1456, questions=[com.aad.ws.domain.Analytic@1690b68]]
+2013-01-30 16:56:29,441 AAD-WS DEBUG JDBCResultDAO:119 - BEGIN : Inserting Test
+2013-01-30 16:56:29,459 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 16:56:29,461 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into test(test_id,app_id,total_questions,test_name) values (?,?,?,?)]
+2013-01-30 16:56:29,467 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,494 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 16:56:30,506 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,507 AAD-WS DEBUG JDBCResultDAO:91 - numTest:: 1
+2013-01-30 16:56:30,507 AAD-WS DEBUG JDBCResultDAO:123 - END : Inserting Test
+2013-01-30 16:56:30,507 AAD-WS DEBUG JDBCResultDAO:124 - test :UTest [TEST_ID=1359142529786, APP_ID=1, TOTAL_QUESTIONS=10]
+2013-01-30 16:56:30,507 AAD-WS DEBUG JDBCResultDAO:127 - Inserting User Session
+2013-01-30 16:56:30,513 AAD-WS DEBUG JdbcTemplate:840 - Executing SQL update and returning generated keys
+2013-01-30 16:56:30,514 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_session(user_session_id) values (?)]
+2013-01-30 16:56:30,515 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,568 AAD-WS DEBUG JdbcTemplate:859 - SQL update affected 1 rows and returned 1 keys
+2013-01-30 16:56:30,570 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,572 AAD-WS DEBUG JDBCResultDAO:139 - END : Inserting User Session
+2013-01-30 16:56:30,572 AAD-WS DEBUG JDBCResultDAO:140 - sessionId :4
+2013-01-30 16:56:30,579 AAD-WS DEBUG JDBCResultDAO:162 - Inserting Question -- Question [QUESTION_ID=1, CORRECT_ANSWER=answer-b,answer-a, TYPE=draganddrop]
+2013-01-30 16:56:30,592 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 16:56:30,593 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into question(question_id,correct_answer) values (?,?)]
+2013-01-30 16:56:30,594 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,598 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,609 AAD-WS  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2013-01-30 16:56:30,612 AAD-WS DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2013-01-30 16:56:30,616 AAD-WS DEBUG BeansDtdResolver:73 - Found beans DTD [http://www.springframework.org/dtd/spring-beans-2.0.dtd] in classpath: spring-beans-2.0.dtd
+2013-01-30 16:56:30,645 AAD-WS DEBUG DefaultBeanDefinitionDocumentReader:87 - Loading bean definitions
+2013-01-30 16:56:30,659 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'DB2'
+2013-01-30 16:56:30,660 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'DB2'
+2013-01-30 16:56:30,661 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'DB2' to allow for resolving potential circular references
+2013-01-30 16:56:30,668 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'DB2'
+2013-01-30 16:56:30,669 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Derby'
+2013-01-30 16:56:30,669 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Derby'
+2013-01-30 16:56:30,669 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Derby' to allow for resolving potential circular references
+2013-01-30 16:56:30,670 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Derby'
+2013-01-30 16:56:30,672 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'H2'
+2013-01-30 16:56:30,672 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'H2'
+2013-01-30 16:56:30,673 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'H2' to allow for resolving potential circular references
+2013-01-30 16:56:30,673 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'H2'
+2013-01-30 16:56:30,674 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'HSQL'
+2013-01-30 16:56:30,674 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'HSQL'
+2013-01-30 16:56:30,674 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'HSQL' to allow for resolving potential circular references
+2013-01-30 16:56:30,675 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'HSQL'
+2013-01-30 16:56:30,675 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Informix'
+2013-01-30 16:56:30,676 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Informix'
+2013-01-30 16:56:30,676 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Informix' to allow for resolving potential circular references
+2013-01-30 16:56:30,676 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Informix'
+2013-01-30 16:56:30,677 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'MS-SQL'
+2013-01-30 16:56:30,677 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'MS-SQL'
+2013-01-30 16:56:30,677 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'MS-SQL' to allow for resolving potential circular references
+2013-01-30 16:56:30,678 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'MS-SQL'
+2013-01-30 16:56:30,678 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'MySQL'
+2013-01-30 16:56:30,679 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'MySQL'
+2013-01-30 16:56:30,679 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'MySQL' to allow for resolving potential circular references
+2013-01-30 16:56:30,680 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'MySQL'
+2013-01-30 16:56:30,680 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Oracle'
+2013-01-30 16:56:30,680 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Oracle'
+2013-01-30 16:56:30,680 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Oracle' to allow for resolving potential circular references
+2013-01-30 16:56:30,681 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Oracle'
+2013-01-30 16:56:30,682 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'PostgreSQL'
+2013-01-30 16:56:30,682 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'PostgreSQL'
+2013-01-30 16:56:30,682 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'PostgreSQL' to allow for resolving potential circular references
+2013-01-30 16:56:30,683 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'PostgreSQL'
+2013-01-30 16:56:30,683 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Sybase'
+2013-01-30 16:56:30,683 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Sybase'
+2013-01-30 16:56:30,684 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Sybase' to allow for resolving potential circular references
+2013-01-30 16:56:30,684 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Sybase'
+2013-01-30 16:56:30,685 AAD-WS  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2013-01-30 16:56:30,689 AAD-WS DEBUG SQLErrorCodesFactory:198 - Looking up default SQLErrorCodes for DataSource [org.apache.tomcat.jdbc.pool.DataSource@161f54e{ConnectionPool[defaultAutoCommit=null; defaultReadOnly=null; defaultTransactionIsolation=-1; defaultCatalog=null; driverClassName=com.mysql.jdbc.Driver; maxActive=100; maxIdle=100; minIdle=10; initialSize=10; maxWait=6000; testOnBorrow=true; testOnReturn=false; timeBetweenEvictionRunsMillis=30000; numTestsPerEvictionRun=0; minEvictableIdleTimeMillis=30000; testWhileIdle=false; testOnConnect=false; password=891212Ch; url=jdbc:mysql://localhost:3306/schoolware; username=root; validationQuery=SELECT 1; validationInterval=1800000; accessToUnderlyingConnectionAllowed=true; removeAbandoned=true; removeAbandonedTimeout=6000; logAbandoned=true; connectionProperties=null; initSQL=SELECT 1; jdbcInterceptors=null; jmxEnabled=true; fairQueue=false; useEquals=false; abandonWhenPercentageFull=0; maxAge=0; useLock=false; dataSource=null; dataSourceJNDI=null; alternateUsernameAllowed=false; }]
+2013-01-30 16:56:30,690 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,691 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,692 AAD-WS DEBUG SQLErrorCodesFactory:216 - Database product name cached for DataSource [org.apache.tomcat.jdbc.pool.DataSource@161f54e]: name is 'MySQL'
+2013-01-30 16:56:30,692 AAD-WS DEBUG SQLErrorCodesFactory:174 - SQL error codes for 'MySQL' found
+2013-01-30 16:56:30,693 AAD-WS DEBUG SQLErrorCodeSQLExceptionTranslator:399 - Translating SQLException with SQL state '23000', error code '1062', message [Duplicate entry '1' for key 'PRIMARY']; SQL was [insert into question(question_id,correct_answer) values (?,?)] for task [PreparedStatementCallback]
+2013-01-30 16:56:30,693 AAD-WS DEBUG JDBCResultDAO:173 - Inserting QuestionTest -- QuestionTest [TEST_ID=1359142529786, QUESION_ID=1]
+2013-01-30 16:56:30,698 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 16:56:30,699 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into question_test(test_id,question_id) values (?,?)]
+2013-01-30 16:56:30,699 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,727 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 16:56:30,728 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,729 AAD-WS DEBUG JDBCResultDAO:178 - numQuestionTest ::1
+2013-01-30 16:56:30,729 AAD-WS DEBUG JDBCResultDAO:187 - BEGIN : Inserting User Test
+2013-01-30 16:56:30,735 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 16:56:30,735 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_test(test_id,user_session_id,score,out_of,time,ques_attended,difficulty,start_time) values (?,?,?,?,?,?,?,?)]
+2013-01-30 16:56:30,735 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,758 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 16:56:30,760 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,760 AAD-WS DEBUG JDBCResultDAO:109 - updatedUserTest:: 1
+2013-01-30 16:56:30,760 AAD-WS DEBUG JDBCResultDAO:190 - END : Inserting User Test
+2013-01-30 16:56:30,762 AAD-WS DEBUG JDBCResultDAO:200 - Inserting UserQuestionTest -- UserQuestionTest [TEST_ID=1359142529786, USER_SESSION_ID=4, QUESTION_ID=1, TIME=15, NUMBER_OF_CLICKS=13, FINAL_ANSWER=answer-b, MARK=1.0]
+2013-01-30 16:56:30,768 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 16:56:30,768 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_question_test(test_id,user_session_id,question_id,time,number_of_clicks,final_answer,mark) values(?,?,?,?,?,?,?)]
+2013-01-30 16:56:30,769 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 16:56:30,811 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 16:56:30,813 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 16:56:30,815 AAD-WS DEBUG JDBCResultDAO:205 - numUserQuestionTest ::1
+2013-01-30 17:01:07,020 AAD-WS  INFO XmlWebApplicationContext:938 - Closing Root WebApplicationContext: startup date [Wed Jan 30 16:53:39 GMT 2013]; root of context hierarchy
+2013-01-30 17:01:07,021 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-01-30 17:01:07,022 AAD-WS  INFO DefaultListableBeanFactory:421 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1711f30: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 17:01:07,024 AAD-WS DEBUG DisposableBeanAdapter:248 - Invoking destroy method 'close' on bean with name 'datasource'
+2013-01-30 17:01:16,785 AAD-WS  INFO ContextLoader:182 - Root WebApplicationContext: initialization started
+2013-01-30 17:01:16,831 AAD-WS  INFO XmlWebApplicationContext:447 - Refreshing Root WebApplicationContext: startup date [Wed Jan 30 17:01:16 GMT 2013]; root of context hierarchy
+2013-01-30 17:01:16,895 AAD-WS  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2013-01-30 17:01:16,902 AAD-WS DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2013-01-30 17:01:16,940 AAD-WS DEBUG PluggableSchemaResolver:140 - Loading schema mappings from [META-INF/spring.schemas]
+2013-01-30 17:01:16,944 AAD-WS DEBUG PluggableSchemaResolver:146 - Loaded schema mappings: {http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2013-01-30 17:01:16,952 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+2013-01-30 17:01:17,037 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+2013-01-30 17:01:17,044 AAD-WS DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+2013-01-30 17:01:17,058 AAD-WS DEBUG DefaultBeanDefinitionDocumentReader:87 - Loading bean definitions
+2013-01-30 17:01:17,086 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0]
+2013-01-30 17:01:17,092 AAD-WS DEBUG DefaultNamespaceHandlerResolver:156 - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2013-01-30 17:01:17,132 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0]
+2013-01-30 17:01:17,150 AAD-WS DEBUG PathMatchingResourcePatternResolver:552 - Looking for matching resources in directory tree [D:\aad-webservice\target\classes\com\aad\ws\resource]
+2013-01-30 17:01:17,151 AAD-WS DEBUG PathMatchingResourcePatternResolver:614 - Searching directory [D:\aad-webservice\target\classes\com\aad\ws\resource] for files matching pattern [D:/aad-webservice/target/classes/com/aad/ws/resource/**/*.class]
+2013-01-30 17:01:17,155 AAD-WS DEBUG PathMatchingResourcePatternResolver:353 - Resolved location pattern [classpath*:com/aad/ws/resource/**/*.class] to resources [file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppsResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\CategoriesResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\ResultResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestsResource.class], file [D:\aad-webservice\target\classes\com\aad\ws\resource\TypesResource.class]]
+2013-01-30 17:01:17,190 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppResource.class]
+2013-01-30 17:01:17,192 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\AppsResource.class]
+2013-01-30 17:01:17,193 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\CategoriesResource.class]
+2013-01-30 17:01:17,194 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\ResultResource.class]
+2013-01-30 17:01:17,195 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestResource.class]
+2013-01-30 17:01:17,197 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TestsResource.class]
+2013-01-30 17:01:17,198 AAD-WS DEBUG ClassPathBeanDefinitionScanner:220 - Identified candidate component class: file [D:\aad-webservice\target\classes\com\aad\ws\resource\TypesResource.class]
+2013-01-30 17:01:17,203 AAD-WS DEBUG BeanDefinitionParserDelegate:417 - Neither XML 'id' nor 'name' specified - using generated bean name [com.aad.ws.exception.InvalidAttributeMapper#0]
+2013-01-30 17:01:17,210 AAD-WS DEBUG XmlBeanDefinitionReader:185 - Loaded 27 bean definitions from location pattern [/WEB-INF/applicationContext.xml]
+2013-01-30 17:01:17,210 AAD-WS DEBUG XmlWebApplicationContext:461 - Bean factory for Root WebApplicationContext: org.springframework.beans.factory.support.DefaultListableBeanFactory@130b195: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 17:01:17,342 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 17:01:17,343 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 17:01:17,372 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0' to allow for resolving potential circular references
+2013-01-30 17:01:17,409 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 17:01:17,410 AAD-WS  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [database.properties]
+2013-01-30 17:01:17,411 AAD-WS  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [app.properties]
+2013-01-30 17:01:17,418 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 17:01:17,419 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 17:01:17,426 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 17:01:17,427 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 17:01:17,468 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 17:01:17,470 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 17:01:17,472 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 17:01:17,472 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 17:01:17,473 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 17:01:17,474 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 17:01:17,475 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 17:01:17,475 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 17:01:17,476 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 17:01:17,477 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 17:01:17,484 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2013-01-30 17:01:17,484 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 17:01:17,485 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 17:01:17,486 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 17:01:17,486 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0' to allow for resolving potential circular references
+2013-01-30 17:01:17,487 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 17:01:17,490 AAD-WS DEBUG XmlWebApplicationContext:735 - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@8bddcc]
+2013-01-30 17:01:17,494 AAD-WS DEBUG XmlWebApplicationContext:759 - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@19fd985]
+2013-01-30 17:01:17,502 AAD-WS DEBUG UiApplicationContextUtils:85 - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@dc2c3b]
+2013-01-30 17:01:17,504 AAD-WS  INFO DefaultListableBeanFactory:532 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@130b195: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0,appResource,appsResource,categoriesResource,resultResource,testResource,testsResource,typesResource,appService,categoryService,testsService,fileUtils,appDao,testsDao,typesDao,resultDao,resultService,appCategory,com.aad.ws.exception.InvalidAttributeMapper#0,typesService,datasource,jdbcTemplate]; root of factory hierarchy
+2013-01-30 17:01:17,507 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2013-01-30 17:01:17,510 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-01-30 17:01:17,510 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-01-30 17:01:17,511 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-01-30 17:01:17,511 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-01-30 17:01:17,512 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'org.springframework.context.annotation.CommonAnnotationBeanPostProcessor#0'
+2013-01-30 17:01:17,512 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appResource'
+2013-01-30 17:01:17,513 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appResource'
+2013-01-30 17:01:17,527 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.AppResource]: AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppResource.appService
+2013-01-30 17:01:17,528 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,535 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appResource': AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppResource.appService
+2013-01-30 17:01:17,538 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appService'
+2013-01-30 17:01:17,540 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appService'
+2013-01-30 17:01:17,544 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.utils.FileUtil com.aad.ws.service.AppService.util
+2013-01-30 17:01:17,545 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.dao.ApplicationDAO com.aad.ws.service.AppService.appDao
+2013-01-30 17:01:17,546 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.AppService]: AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.AppService.categoryDao
+2013-01-30 17:01:17,547 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appService' to allow for resolving potential circular references
+2013-01-30 17:01:17,559 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.utils.FileUtil com.aad.ws.service.AppService.util
+2013-01-30 17:01:17,560 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'fileUtils'
+2013-01-30 17:01:17,561 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'fileUtils'
+2013-01-30 17:01:17,562 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'fileUtils' to allow for resolving potential circular references
+2013-01-30 17:01:17,569 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'fileUtils'
+2013-01-30 17:01:17,570 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'fileUtils'
+2013-01-30 17:01:17,570 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.dao.ApplicationDAO com.aad.ws.service.AppService.appDao
+2013-01-30 17:01:17,571 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appDao'
+2013-01-30 17:01:17,571 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appDao'
+2013-01-30 17:01:17,576 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCApplicationDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCApplicationDAO.jdbcTemplate
+2013-01-30 17:01:17,577 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appDao' to allow for resolving potential circular references
+2013-01-30 17:01:17,582 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCApplicationDAO.jdbcTemplate
+2013-01-30 17:01:17,584 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'jdbcTemplate'
+2013-01-30 17:01:17,585 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'jdbcTemplate'
+2013-01-30 17:01:17,592 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'datasource'
+2013-01-30 17:01:17,593 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'datasource'
+2013-01-30 17:01:17,609 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'datasource' to allow for resolving potential circular references
+2013-01-30 17:01:17,635 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'datasource'
+2013-01-30 17:01:17,650 AAD-WS DEBUG BeanUtils:410 - No property editor [org.springframework.jdbc.core.JdbcOperationsEditor] found for type org.springframework.jdbc.core.JdbcOperations according to 'Editor' suffix convention
+2013-01-30 17:01:17,664 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'jdbcTemplate' to allow for resolving potential circular references
+2013-01-30 17:01:17,674 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'jdbcTemplate'
+2013-01-30 17:01:17,674 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appDao' to bean named 'jdbcTemplate'
+2013-01-30 17:01:17,675 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appDao'
+2013-01-30 17:01:17,675 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'appDao'
+2013-01-30 17:01:17,676 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appService': AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.AppService.categoryDao
+2013-01-30 17:01:17,677 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appCategory'
+2013-01-30 17:01:17,677 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appCategory'
+2013-01-30 17:01:17,678 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCCategoryDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCCategoryDAO.jdbcTemplate
+2013-01-30 17:01:17,679 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appCategory' to allow for resolving potential circular references
+2013-01-30 17:01:17,684 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appCategory': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCCategoryDAO.jdbcTemplate
+2013-01-30 17:01:17,686 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 17:01:17,686 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appCategory' to bean named 'jdbcTemplate'
+2013-01-30 17:01:17,687 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appCategory'
+2013-01-30 17:01:17,687 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appService' to bean named 'appCategory'
+2013-01-30 17:01:17,688 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appService'
+2013-01-30 17:01:17,689 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appResource' to bean named 'appService'
+2013-01-30 17:01:17,690 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appResource'
+2013-01-30 17:01:17,690 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'appsResource'
+2013-01-30 17:01:17,691 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'appsResource'
+2013-01-30 17:01:17,692 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.AppsResource]: AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppsResource.appService
+2013-01-30 17:01:17,693 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'appsResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,700 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'appsResource': AutowiredFieldElement for private com.aad.ws.service.AppService com.aad.ws.resource.AppsResource.appService
+2013-01-30 17:01:17,701 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appService'
+2013-01-30 17:01:17,701 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'appsResource' to bean named 'appService'
+2013-01-30 17:01:17,702 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'appsResource'
+2013-01-30 17:01:17,702 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'categoriesResource'
+2013-01-30 17:01:17,703 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'categoriesResource'
+2013-01-30 17:01:17,705 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.CategoriesResource]: AutowiredFieldElement for private com.aad.ws.service.CategoryService com.aad.ws.resource.CategoriesResource.categoryService
+2013-01-30 17:01:17,706 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'categoriesResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,710 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'categoriesResource': AutowiredFieldElement for private com.aad.ws.service.CategoryService com.aad.ws.resource.CategoriesResource.categoryService
+2013-01-30 17:01:17,711 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'categoryService'
+2013-01-30 17:01:17,712 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'categoryService'
+2013-01-30 17:01:17,713 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.CategoryService]: AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.CategoryService.categoryDao
+2013-01-30 17:01:17,714 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'categoryService' to allow for resolving potential circular references
+2013-01-30 17:01:17,720 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'categoryService': AutowiredFieldElement for private com.aad.ws.dao.CategoryDAO com.aad.ws.service.CategoryService.categoryDao
+2013-01-30 17:01:17,721 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appCategory'
+2013-01-30 17:01:17,722 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'categoryService' to bean named 'appCategory'
+2013-01-30 17:01:17,723 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'categoryService'
+2013-01-30 17:01:17,723 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'categoriesResource' to bean named 'categoryService'
+2013-01-30 17:01:17,725 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'categoriesResource'
+2013-01-30 17:01:17,726 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultResource'
+2013-01-30 17:01:17,726 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultResource'
+2013-01-30 17:01:17,729 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.ResultResource]: AutowiredFieldElement for private com.aad.ws.service.submitResultService com.aad.ws.resource.ResultResource.resultService
+2013-01-30 17:01:17,730 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,748 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultResource': AutowiredFieldElement for private com.aad.ws.service.submitResultService com.aad.ws.resource.ResultResource.resultService
+2013-01-30 17:01:17,749 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultService'
+2013-01-30 17:01:17,749 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultService'
+2013-01-30 17:01:17,750 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.submitResultService]: AutowiredFieldElement for private com.aad.ws.dao.ResultDAO com.aad.ws.service.submitResultService.resultDao
+2013-01-30 17:01:17,751 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultService' to allow for resolving potential circular references
+2013-01-30 17:01:17,758 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultService': AutowiredFieldElement for private com.aad.ws.dao.ResultDAO com.aad.ws.service.submitResultService.resultDao
+2013-01-30 17:01:17,760 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'resultDao'
+2013-01-30 17:01:17,760 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'resultDao'
+2013-01-30 17:01:17,763 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCResultDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCResultDAO.jdbcTemplate
+2013-01-30 17:01:17,765 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'resultDao' to allow for resolving potential circular references
+2013-01-30 17:01:17,770 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'resultDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCResultDAO.jdbcTemplate
+2013-01-30 17:01:17,771 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 17:01:17,772 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultDao' to bean named 'jdbcTemplate'
+2013-01-30 17:01:17,773 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultDao'
+2013-01-30 17:01:17,774 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultService' to bean named 'resultDao'
+2013-01-30 17:01:17,775 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultService'
+2013-01-30 17:01:17,776 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'resultResource' to bean named 'resultService'
+2013-01-30 17:01:17,776 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'resultResource'
+2013-01-30 17:01:17,777 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testResource'
+2013-01-30 17:01:17,777 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testResource'
+2013-01-30 17:01:17,779 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TestResource]: AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestResource.testsService
+2013-01-30 17:01:17,780 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,785 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testResource': AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestResource.testsService
+2013-01-30 17:01:17,787 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsService'
+2013-01-30 17:01:17,787 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsService'
+2013-01-30 17:01:17,793 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.TestsService]: AutowiredFieldElement for private com.aad.ws.dao.TestsDAO com.aad.ws.service.TestsService.testsDao
+2013-01-30 17:01:17,794 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsService' to allow for resolving potential circular references
+2013-01-30 17:01:17,799 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsService': AutowiredFieldElement for private com.aad.ws.dao.TestsDAO com.aad.ws.service.TestsService.testsDao
+2013-01-30 17:01:17,800 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsDao'
+2013-01-30 17:01:17,800 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsDao'
+2013-01-30 17:01:17,801 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCTestsDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTestsDAO.jdbcTemplate
+2013-01-30 17:01:17,802 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsDao' to allow for resolving potential circular references
+2013-01-30 17:01:17,809 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTestsDAO.jdbcTemplate
+2013-01-30 17:01:17,810 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 17:01:17,810 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsDao' to bean named 'jdbcTemplate'
+2013-01-30 17:01:17,811 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsDao'
+2013-01-30 17:01:17,811 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsService' to bean named 'testsDao'
+2013-01-30 17:01:17,812 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsService'
+2013-01-30 17:01:17,812 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testResource' to bean named 'testsService'
+2013-01-30 17:01:17,813 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testResource'
+2013-01-30 17:01:17,813 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'testsResource'
+2013-01-30 17:01:17,814 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'testsResource'
+2013-01-30 17:01:17,815 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TestsResource]: AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestsResource.testsService
+2013-01-30 17:01:17,816 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'testsResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,821 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'testsResource': AutowiredFieldElement for private com.aad.ws.service.TestsService com.aad.ws.resource.TestsResource.testsService
+2013-01-30 17:01:17,822 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsService'
+2013-01-30 17:01:17,824 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'testsResource' to bean named 'testsService'
+2013-01-30 17:01:17,825 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'testsResource'
+2013-01-30 17:01:17,825 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesResource'
+2013-01-30 17:01:17,826 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesResource'
+2013-01-30 17:01:17,828 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.resource.TypesResource]: AutowiredFieldElement for private com.aad.ws.service.TypesService com.aad.ws.resource.TypesResource.typesService
+2013-01-30 17:01:17,829 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesResource' to allow for resolving potential circular references
+2013-01-30 17:01:17,835 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesResource': AutowiredFieldElement for private com.aad.ws.service.TypesService com.aad.ws.resource.TypesResource.typesService
+2013-01-30 17:01:17,840 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesService'
+2013-01-30 17:01:17,841 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesService'
+2013-01-30 17:01:17,842 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.service.TypesService]: AutowiredFieldElement for private com.aad.ws.dao.TypesDAO com.aad.ws.service.TypesService.typesDao
+2013-01-30 17:01:17,843 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesService' to allow for resolving potential circular references
+2013-01-30 17:01:17,848 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesService': AutowiredFieldElement for private com.aad.ws.dao.TypesDAO com.aad.ws.service.TypesService.typesDao
+2013-01-30 17:01:17,849 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'typesDao'
+2013-01-30 17:01:17,849 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'typesDao'
+2013-01-30 17:01:17,850 AAD-WS DEBUG InjectionMetadata:59 - Found injected element on class [com.aad.ws.dao.JDBCTypesDAO]: AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTypesDAO.jdbcTemplate
+2013-01-30 17:01:17,851 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'typesDao' to allow for resolving potential circular references
+2013-01-30 17:01:17,857 AAD-WS DEBUG InjectionMetadata:82 - Processing injected method of bean 'typesDao': AutowiredFieldElement for private org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate com.aad.ws.dao.JDBCTypesDAO.jdbcTemplate
+2013-01-30 17:01:17,858 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 17:01:17,859 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesDao' to bean named 'jdbcTemplate'
+2013-01-30 17:01:17,859 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesDao'
+2013-01-30 17:01:17,860 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesService' to bean named 'typesDao'
+2013-01-30 17:01:17,861 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesService'
+2013-01-30 17:01:17,861 AAD-WS DEBUG AutowiredAnnotationBeanPostProcessor:418 - Autowiring by type from bean name 'typesResource' to bean named 'typesService'
+2013-01-30 17:01:17,861 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'typesResource'
+2013-01-30 17:01:17,862 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appService'
+2013-01-30 17:01:17,862 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'categoryService'
+2013-01-30 17:01:17,863 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsService'
+2013-01-30 17:01:17,864 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'fileUtils'
+2013-01-30 17:01:17,864 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appDao'
+2013-01-30 17:01:17,864 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsDao'
+2013-01-30 17:01:17,865 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesDao'
+2013-01-30 17:01:17,865 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultDao'
+2013-01-30 17:01:17,865 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultService'
+2013-01-30 17:01:17,866 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appCategory'
+2013-01-30 17:01:17,866 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 17:01:17,867 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 17:01:17,867 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'com.aad.ws.exception.InvalidAttributeMapper#0' to allow for resolving potential circular references
+2013-01-30 17:01:17,873 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 17:01:17,874 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesService'
+2013-01-30 17:01:17,875 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'datasource'
+2013-01-30 17:01:17,875 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'jdbcTemplate'
+2013-01-30 17:01:17,877 AAD-WS DEBUG XmlWebApplicationContext:786 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1e74140]
+2013-01-30 17:01:17,878 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-01-30 17:01:17,880 AAD-WS DEBUG ContextLoader:197 - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2013-01-30 17:01:17,881 AAD-WS  INFO ContextLoader:202 - Root WebApplicationContext: initialization completed in 1092 ms
+2013-01-30 17:01:39,110 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'com.aad.ws.exception.InvalidAttributeMapper#0'
+2013-01-30 17:01:40,019 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appResource'
+2013-01-30 17:01:40,022 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'appsResource'
+2013-01-30 17:01:40,023 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'categoriesResource'
+2013-01-30 17:01:40,027 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'resultResource'
+2013-01-30 17:01:40,028 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testResource'
+2013-01-30 17:01:40,029 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'testsResource'
+2013-01-30 17:01:40,030 AAD-WS DEBUG DefaultListableBeanFactory:241 - Returning cached instance of singleton bean 'typesResource'
+2013-01-30 17:01:40,357 AAD-WS DEBUG ResultResource:35 - *******************10
+2013-01-30 17:01:40,357 AAD-WS DEBUG JDBCResultDAO:116 - Result :Results [totalquestions=10, totalmark=124.0, quesattended=1, overallscoreobtained=8, difficulty=Hard, appid=1, teststarttime=2013-01-25 19:35:29, testid=1359142529786, totaltime=1456, questions=[com.aad.ws.domain.Analytic@14165d0]]
+2013-01-30 17:01:40,358 AAD-WS DEBUG JDBCResultDAO:119 - BEGIN : Inserting Test
+2013-01-30 17:01:40,373 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:01:40,374 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into test(test_id,app_id,total_questions,test_name) values (?,?,?,?)]
+2013-01-30 17:01:40,382 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,050 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:01:41,055 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,055 AAD-WS DEBUG JDBCResultDAO:91 - numTest:: 1
+2013-01-30 17:01:41,055 AAD-WS DEBUG JDBCResultDAO:123 - END : Inserting Test
+2013-01-30 17:01:41,056 AAD-WS DEBUG JDBCResultDAO:124 - test :UTest [TEST_ID=1359142529786, APP_ID=1, TOTAL_QUESTIONS=10]
+2013-01-30 17:01:41,056 AAD-WS DEBUG JDBCResultDAO:127 - Inserting User Session
+2013-01-30 17:01:41,062 AAD-WS DEBUG JdbcTemplate:840 - Executing SQL update and returning generated keys
+2013-01-30 17:01:41,063 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_session(user_session_id) values (?)]
+2013-01-30 17:01:41,064 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,120 AAD-WS DEBUG JdbcTemplate:859 - SQL update affected 1 rows and returned 1 keys
+2013-01-30 17:01:41,122 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,123 AAD-WS DEBUG JDBCResultDAO:139 - END : Inserting User Session
+2013-01-30 17:01:41,123 AAD-WS DEBUG JDBCResultDAO:140 - sessionId :4
+2013-01-30 17:01:41,128 AAD-WS DEBUG JDBCResultDAO:162 - Inserting Question -- Question [QUESTION_ID=1, CORRECT_ANSWER=answer-b,answer-a, TYPE=draganddrop]
+2013-01-30 17:01:41,134 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:01:41,135 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into question(question_id,correct_answer,type) values (?,?,?)]
+2013-01-30 17:01:41,136 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,140 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,152 AAD-WS  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2013-01-30 17:01:41,154 AAD-WS DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2013-01-30 17:01:41,156 AAD-WS DEBUG BeansDtdResolver:73 - Found beans DTD [http://www.springframework.org/dtd/spring-beans-2.0.dtd] in classpath: spring-beans-2.0.dtd
+2013-01-30 17:01:41,169 AAD-WS DEBUG DefaultBeanDefinitionDocumentReader:87 - Loading bean definitions
+2013-01-30 17:01:41,182 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'DB2'
+2013-01-30 17:01:41,183 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'DB2'
+2013-01-30 17:01:41,184 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'DB2' to allow for resolving potential circular references
+2013-01-30 17:01:41,194 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'DB2'
+2013-01-30 17:01:41,195 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Derby'
+2013-01-30 17:01:41,195 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Derby'
+2013-01-30 17:01:41,196 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Derby' to allow for resolving potential circular references
+2013-01-30 17:01:41,198 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Derby'
+2013-01-30 17:01:41,199 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'H2'
+2013-01-30 17:01:41,201 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'H2'
+2013-01-30 17:01:41,202 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'H2' to allow for resolving potential circular references
+2013-01-30 17:01:41,202 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'H2'
+2013-01-30 17:01:41,204 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'HSQL'
+2013-01-30 17:01:41,204 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'HSQL'
+2013-01-30 17:01:41,204 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'HSQL' to allow for resolving potential circular references
+2013-01-30 17:01:41,205 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'HSQL'
+2013-01-30 17:01:41,206 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Informix'
+2013-01-30 17:01:41,206 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Informix'
+2013-01-30 17:01:41,206 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Informix' to allow for resolving potential circular references
+2013-01-30 17:01:41,207 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Informix'
+2013-01-30 17:01:41,207 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'MS-SQL'
+2013-01-30 17:01:41,208 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'MS-SQL'
+2013-01-30 17:01:41,209 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'MS-SQL' to allow for resolving potential circular references
+2013-01-30 17:01:41,209 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'MS-SQL'
+2013-01-30 17:01:41,210 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'MySQL'
+2013-01-30 17:01:41,210 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'MySQL'
+2013-01-30 17:01:41,211 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'MySQL' to allow for resolving potential circular references
+2013-01-30 17:01:41,211 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'MySQL'
+2013-01-30 17:01:41,212 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Oracle'
+2013-01-30 17:01:41,212 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Oracle'
+2013-01-30 17:01:41,213 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Oracle' to allow for resolving potential circular references
+2013-01-30 17:01:41,214 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Oracle'
+2013-01-30 17:01:41,214 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'PostgreSQL'
+2013-01-30 17:01:41,215 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'PostgreSQL'
+2013-01-30 17:01:41,215 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'PostgreSQL' to allow for resolving potential circular references
+2013-01-30 17:01:41,216 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'PostgreSQL'
+2013-01-30 17:01:41,217 AAD-WS DEBUG DefaultListableBeanFactory:214 - Creating shared instance of singleton bean 'Sybase'
+2013-01-30 17:01:41,217 AAD-WS DEBUG DefaultListableBeanFactory:424 - Creating instance of bean 'Sybase'
+2013-01-30 17:01:41,218 AAD-WS DEBUG DefaultListableBeanFactory:498 - Eagerly caching bean 'Sybase' to allow for resolving potential circular references
+2013-01-30 17:01:41,219 AAD-WS DEBUG DefaultListableBeanFactory:452 - Finished creating instance of bean 'Sybase'
+2013-01-30 17:01:41,219 AAD-WS  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2013-01-30 17:01:41,232 AAD-WS DEBUG SQLErrorCodesFactory:198 - Looking up default SQLErrorCodes for DataSource [org.apache.tomcat.jdbc.pool.DataSource@19ae920{ConnectionPool[defaultAutoCommit=null; defaultReadOnly=null; defaultTransactionIsolation=-1; defaultCatalog=null; driverClassName=com.mysql.jdbc.Driver; maxActive=100; maxIdle=100; minIdle=10; initialSize=10; maxWait=6000; testOnBorrow=true; testOnReturn=false; timeBetweenEvictionRunsMillis=30000; numTestsPerEvictionRun=0; minEvictableIdleTimeMillis=30000; testWhileIdle=false; testOnConnect=false; password=891212Ch; url=jdbc:mysql://localhost:3306/schoolware; username=root; validationQuery=SELECT 1; validationInterval=1800000; accessToUnderlyingConnectionAllowed=true; removeAbandoned=true; removeAbandonedTimeout=6000; logAbandoned=true; connectionProperties=null; initSQL=SELECT 1; jdbcInterceptors=null; jmxEnabled=true; fairQueue=false; useEquals=false; abandonWhenPercentageFull=0; maxAge=0; useLock=false; dataSource=null; dataSourceJNDI=null; alternateUsernameAllowed=false; }]
+2013-01-30 17:01:41,236 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,238 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,239 AAD-WS DEBUG SQLErrorCodesFactory:216 - Database product name cached for DataSource [org.apache.tomcat.jdbc.pool.DataSource@19ae920]: name is 'MySQL'
+2013-01-30 17:01:41,239 AAD-WS DEBUG SQLErrorCodesFactory:174 - SQL error codes for 'MySQL' found
+2013-01-30 17:01:41,240 AAD-WS DEBUG SQLErrorCodeSQLExceptionTranslator:399 - Translating SQLException with SQL state '23000', error code '1062', message [Duplicate entry '1' for key 'PRIMARY']; SQL was [insert into question(question_id,correct_answer,type) values (?,?,?)] for task [PreparedStatementCallback]
+2013-01-30 17:01:41,240 AAD-WS DEBUG JDBCResultDAO:173 - Inserting QuestionTest -- QuestionTest [TEST_ID=1359142529786, QUESION_ID=1]
+2013-01-30 17:01:41,245 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:01:41,246 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into question_test(test_id,question_id) values (?,?)]
+2013-01-30 17:01:41,246 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,289 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:01:41,290 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,291 AAD-WS DEBUG JDBCResultDAO:178 - numQuestionTest ::1
+2013-01-30 17:01:41,292 AAD-WS DEBUG JDBCResultDAO:187 - BEGIN : Inserting User Test
+2013-01-30 17:01:41,297 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:01:41,298 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_test(test_id,user_session_id,score,out_of,time,ques_attended,difficulty,start_time) values (?,?,?,?,?,?,?,?)]
+2013-01-30 17:01:41,299 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,338 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:01:41,340 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,341 AAD-WS DEBUG JDBCResultDAO:109 - updatedUserTest:: 1
+2013-01-30 17:01:41,341 AAD-WS DEBUG JDBCResultDAO:190 - END : Inserting User Test
+2013-01-30 17:01:41,343 AAD-WS DEBUG JDBCResultDAO:200 - Inserting UserQuestionTest -- UserQuestionTest [TEST_ID=1359142529786, USER_SESSION_ID=4, QUESTION_ID=1, TIME=15, NUMBER_OF_CLICKS=13, FINAL_ANSWER=answer-b, MARK=1.0]
+2013-01-30 17:01:41,347 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:01:41,348 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_question_test(test_id,user_session_id,question_id,time,number_of_clicks,final_answer,mark) values(?,?,?,?,?,?,?)]
+2013-01-30 17:01:41,348 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:01:41,421 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:01:41,422 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:01:41,423 AAD-WS DEBUG JDBCResultDAO:205 - numUserQuestionTest ::1
+2013-01-30 17:02:44,826 AAD-WS DEBUG ResultResource:35 - *******************10
+2013-01-30 17:02:44,830 AAD-WS DEBUG JDBCResultDAO:116 - Result :Results [totalquestions=10, totalmark=124.0, quesattended=1, overallscoreobtained=8, difficulty=Hard, appid=1, teststarttime=2013-01-25 19:35:29, testid=1359142529786, totaltime=1456, questions=[com.aad.ws.domain.Analytic@88a4b4]]
+2013-01-30 17:02:44,831 AAD-WS DEBUG JDBCResultDAO:119 - BEGIN : Inserting Test
+2013-01-30 17:02:44,831 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:02:44,832 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into test(test_id,app_id,total_questions,test_name) values (?,?,?,?)]
+2013-01-30 17:02:44,832 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:02:44,899 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:02:44,900 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:02:44,901 AAD-WS DEBUG JDBCResultDAO:91 - numTest:: 1
+2013-01-30 17:02:44,901 AAD-WS DEBUG JDBCResultDAO:123 - END : Inserting Test
+2013-01-30 17:02:44,902 AAD-WS DEBUG JDBCResultDAO:124 - test :UTest [TEST_ID=1359142529786, APP_ID=1, TOTAL_QUESTIONS=10]
+2013-01-30 17:02:44,902 AAD-WS DEBUG JDBCResultDAO:127 - Inserting User Session
+2013-01-30 17:02:44,902 AAD-WS DEBUG JdbcTemplate:840 - Executing SQL update and returning generated keys
+2013-01-30 17:02:44,905 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_session(user_session_id) values (?)]
+2013-01-30 17:02:44,905 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:02:44,947 AAD-WS DEBUG JdbcTemplate:859 - SQL update affected 1 rows and returned 1 keys
+2013-01-30 17:02:44,950 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:02:44,955 AAD-WS DEBUG JDBCResultDAO:139 - END : Inserting User Session
+2013-01-30 17:02:44,956 AAD-WS DEBUG JDBCResultDAO:140 - sessionId :4
+2013-01-30 17:02:44,956 AAD-WS DEBUG JDBCResultDAO:162 - Inserting Question -- Question [QUESTION_ID=546541, CORRECT_ANSWER=answer-b,answer-a, TYPE=draganddrop]
+2013-01-30 17:02:44,957 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:02:44,958 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into question(question_id,correct_answer,type) values (?,?,?)]
+2013-01-30 17:02:44,959 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:02:45,069 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:02:45,070 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:02:45,071 AAD-WS DEBUG JDBCResultDAO:167 - numQuestion ::1
+2013-01-30 17:02:45,072 AAD-WS DEBUG JDBCResultDAO:173 - Inserting QuestionTest -- QuestionTest [TEST_ID=1359142529786, QUESION_ID=546541]
+2013-01-30 17:02:45,073 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:02:45,074 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into question_test(test_id,question_id) values (?,?)]
+2013-01-30 17:02:45,074 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:02:45,103 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:02:45,104 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:02:45,105 AAD-WS DEBUG JDBCResultDAO:178 - numQuestionTest ::1
+2013-01-30 17:02:45,106 AAD-WS DEBUG JDBCResultDAO:187 - BEGIN : Inserting User Test
+2013-01-30 17:02:45,106 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:02:45,107 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_test(test_id,user_session_id,score,out_of,time,ques_attended,difficulty,start_time) values (?,?,?,?,?,?,?,?)]
+2013-01-30 17:02:45,108 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:02:45,138 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:02:45,139 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:02:45,140 AAD-WS DEBUG JDBCResultDAO:109 - updatedUserTest:: 1
+2013-01-30 17:02:45,140 AAD-WS DEBUG JDBCResultDAO:190 - END : Inserting User Test
+2013-01-30 17:02:45,141 AAD-WS DEBUG JDBCResultDAO:200 - Inserting UserQuestionTest -- UserQuestionTest [TEST_ID=1359142529786, USER_SESSION_ID=4, QUESTION_ID=546541, TIME=15, NUMBER_OF_CLICKS=13, FINAL_ANSWER=answer-b, MARK=1.0]
+2013-01-30 17:02:45,142 AAD-WS DEBUG JdbcTemplate:810 - Executing prepared SQL update
+2013-01-30 17:02:45,142 AAD-WS DEBUG JdbcTemplate:569 - Executing prepared SQL statement [insert into user_question_test(test_id,user_session_id,question_id,time,number_of_clicks,final_answer,mark) values(?,?,?,?,?,?,?)]
+2013-01-30 17:02:45,143 AAD-WS DEBUG DataSourceUtils:110 - Fetching JDBC Connection from DataSource
+2013-01-30 17:02:45,161 AAD-WS DEBUG JdbcTemplate:819 - SQL update affected 1 rows
+2013-01-30 17:02:45,162 AAD-WS DEBUG DataSourceUtils:332 - Returning JDBC Connection to DataSource
+2013-01-30 17:02:45,163 AAD-WS DEBUG JDBCResultDAO:205 - numUserQuestionTest ::1
