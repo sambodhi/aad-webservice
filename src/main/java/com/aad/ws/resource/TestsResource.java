@@ -11,7 +11,6 @@ import javax.ws.rs.core.MediaType;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.aad.ws.dto.Test;
@@ -32,26 +31,26 @@ public class TestsResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public TestsCollection getTests(final @PathParam("testID") int id){
 		//TODO: uncomment when database done
-		//TestsCollection tests = testsService.getTests(id); 
+		TestsCollection tests = testsService.getTests(id); 
 		
 		//remove it!
-		TestsCollection tests = new TestsCollection();
-		
-		List<Test> testList = new ArrayList<Test>();
-		
-		Test test1 = new Test();
-		test1.setTestId(15);
-		test1.setTestName("MathTest");
-		
-		Test test2 = new Test();
-		test2.setTestId(16);
-		test2.setTestName("BiologyTest");
-		
-		testList.add(test1);
-		testList.add(test2);
-		
-		tests.setTest(testList);
-		
+//		TestsCollection tests = new TestsCollection();
+//		
+//		List<Test> testList = new ArrayList<Test>();
+//		
+//		Test test1 = new Test();
+//		test1.setTestId(15);
+//		test1.setTestName("MathTest");
+//		
+//		Test test2 = new Test();
+//		test2.setTestId(16);
+//		test2.setTestName("BiologyTest");
+//		
+//		testList.add(test1);
+//		testList.add(test2);
+//		
+//		tests.setTest(testList);
+//		
 		return tests;
 	}
 }

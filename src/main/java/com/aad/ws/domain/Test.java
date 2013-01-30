@@ -1,4 +1,4 @@
-package com.aad.ws.dto;
+package com.aad.ws.domain;
 
 public class Test {
 	

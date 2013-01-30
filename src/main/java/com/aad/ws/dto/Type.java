@@ -25,4 +25,11 @@ public class Type {
 		this.appExtention = appExtention;
 	}
 	
+	@Override
+	public String toString() {
+		return "Type [typeId=" + typeId + ", appType=" + appType
+				+ ", appExtention=" + appExtention + "]";
+	}
+	
+	
 }
