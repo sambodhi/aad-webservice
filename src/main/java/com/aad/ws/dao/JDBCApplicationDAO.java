@@ -16,7 +16,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
 import com.aad.ws.domain.Application;
-import com.aad.ws.service.AppService;
 
 public class JDBCApplicationDAO implements
 		ApplicationDAO {
