@@ -11,17 +11,17 @@
                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
                         http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
 
-	<beans:bean 
+	<beans:bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
- 		
+
 		<beans:property name="locations">
 			<beans:list>
-			    <beans:value>classpath:database.properties</beans:value>
-			    <beans:value>classpath:app.properties</beans:value>
+				<beans:value>classpath:database.properties</beans:value>
+				<beans:value>classpath:app.properties</beans:value>
 			</beans:list>
-		</beans:property> 
+		</beans:property>
 	</beans:bean>
-	
+
 	<context:annotation-config />
 
 	<beans:bean
@@ -29,50 +29,57 @@
 	<context:component-scan base-package="com.aad.ws.resource" />
 
 	<beans:bean id="appService" class="com.aad.ws.service.AppService">
-		<beans:property name="storeAppPath" value="${aad.ws.store.app.path}"/>
+		<beans:property name="storeAppPath" value="${aad.ws.store.app.path}" />
 	</beans:bean>
 
 	<beans:bean id="categoryService" class="com.aad.ws.service.CategoryService" />
-	
+
 	<beans:bean id="testsService" class="com.aad.ws.service.TestsService" />
-	
+
 	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil">
-		<beans:property name="possibleAppArchiveExts" value="${aad.ws.store.app.allowed.exe.file.types}"/>
-		<beans:property name="possibleAppIconExts" value="${aad.ws.store.app.allowed.icon.file.types}"/>
-		<beans:property name="downloadAppUrl" value="${aad.ws.store.download.app.url}"/>
+		<beans:property name="possibleAppArchiveExts"
+			value="${aad.ws.store.app.allowed.exe.file.types}" />
+		<beans:property name="possibleAppIconExts"
+			value="${aad.ws.store.app.allowed.icon.file.types}" />
+		<beans:property name="downloadAppUrl" value="${aad.ws.store.download.app.url}" />
 	</beans:bean>
-	
+
 	<beans:bean id="appDao" class="com.aad.ws.dao.JDBCApplicationDAO" />
-	
+
 	<beans:bean id="testsDao" class="com.aad.ws.dao.JDBCTestsDAO" />
 	<beans:bean id="typesDao" class="com.aad.ws.dao.JDBCTypesDAO" />
 	<beans:bean id="resultDao" class="com.aad.ws.dao.JDBCResultDAO" />
-	 <beans:bean id="resultService" class="com.aad.ws.service.submitResultService"/>
-	
+	<beans:bean id="resultService" class="com.aad.ws.service.submitResultService" />
+
+	<beans:bean id="uQuestionsService" class="com.add.ws.service.UQuestionsService" />
+
+	<beans:bean id="userUQuestions" class="com.aad.ws.dao.JDBCUQestionsDAO" />
+
 	<beans:bean id="appCategory" class="com.aad.ws.dao.JDBCCategoryDAO" />
-	
-	<beans:bean class="com.aad.ws.exception.InvalidAttributeMapper" scope="singleton" />
+
+	<beans:bean class="com.aad.ws.exception.InvalidAttributeMapper"
+		scope="singleton" />
 
 	<beans:bean id="typesService" class="com.aad.ws.service.TypesService" />
 	<!-- bean to load datasource - jdbc pool -->
 
 	<beans:bean id="datasource" class="org.apache.tomcat.jdbc.pool.DataSource"
 		destroy-method="close" p:driverClassName="${jdbc.db.driverClassName}"
-		p:url="${jdbc.db.url}" p:username="${jdbc.db.username}"
-		p:password="${jdbc.db.password}" p:initialSize="10" p:minIdle="10"
-		p:maxIdle="100" p:maxActive="100" p:maxWait="6000" p:jmxEnabled="true"
-		p:removeAbandoned="true" p:removeAbandonedTimeout="6000"
-		p:logAbandoned="true" p:testOnBorrow="true" p:testOnReturn="false"
-		p:testWhileIdle="false" p:useEquals="false" p:fairQueue="false"
-		p:timeBetweenEvictionRunsMillis="30000" p:minEvictableIdleTimeMillis="30000"
-		p:validationInterval="1800000" p:initSQL="SELECT 1" p:validationQuery="SELECT 1" />
-	
-		
+		p:url="${jdbc.db.url}" p:username="${jdbc.db.username}" p:password="${jdbc.db.password}"
+		p:initialSize="10" p:minIdle="10" p:maxIdle="100" p:maxActive="100"
+		p:maxWait="6000" p:jmxEnabled="true" p:removeAbandoned="true"
+		p:removeAbandonedTimeout="6000" p:logAbandoned="true" p:testOnBorrow="true"
+		p:testOnReturn="false" p:testWhileIdle="false" p:useEquals="false"
+		p:fairQueue="false" p:timeBetweenEvictionRunsMillis="30000"
+		p:minEvictableIdleTimeMillis="30000" p:validationInterval="1800000"
+		p:initSQL="SELECT 1" p:validationQuery="SELECT 1" />
+
+
 	<beans:bean id="jdbcTemplate"
 		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
 		<beans:constructor-arg index="0">
 			<beans:ref bean="datasource" />
 		</beans:constructor-arg>
 	</beans:bean>
-	
+
 </beans:beans>
