@@ -37,15 +37,7 @@ public class AppResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public AppDetails getAppInfo(final @PathParam("appId") int id) {
 		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
-		//TODO:uncomment when database is accessible
 		AppDetails appDetails = appService.getAppDetails(id);
-		
-		//remove it!
-//		AppDetails appDetails = new AppDetails();
-//		appDetails.setCategoryName("Maths");
-//		appDetails.setDescription("maths app");
-//		appDetails.setName("app1");
-//		appDetails.setUrl("http://schoolware.cs.ucl.ac.uk/web/Apps/jshd-dj.jar");
 		
 		return appDetails;
 	}
@@ -53,6 +45,7 @@ public class AppResource {
 	@POST
 	@Path("/upload")
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response uploadFile(
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail,
@@ -60,7 +53,8 @@ public class AppResource {
 			@FormDataParam("description") String description,
 			@FormDataParam("type") int typeId,
 			@FormDataParam("category") int categoryId,
-			@FormDataParam("size") String size
+			@FormDataParam("size") String size,
+			@FormDataParam("developer") String developer
 			) throws InvalidAttribute {
 
 		logger.debug("Parameters obtained from request: + " +
@@ -70,7 +64,8 @@ public class AppResource {
 				", type =" + typeId +
 				", fileDetail =" + fileDetail +
 				", fileData (is null?) =" + (uploadedInputStream==null) +
-				", size =" +size);
+				", size =" + size +
+				", developer =" + developer);
 		
 		//validate request
 		if(uploadedInputStream == null){
@@ -91,13 +86,14 @@ public class AppResource {
 		if(categoryId == 0){
 			 throw new InvalidAttribute("category", "category missing");
 		}
+		if(StringUtils.isEmpty(developer)){
+			 throw new InvalidAttribute("developer", "developer missing");
+		}
 		
-		Application application = new Application(0, categoryId, typeId, name,  size, null, description);
+		Application application = new Application(0, categoryId, typeId, name,  size, developer, description);
 		logger.debug("Application params received from request: " + application);
 		
-		//TODO: this function must be used for saving app to database 
-		String outputLoc = appService.storeFile(fileDetail.getFileName(), uploadedInputStream, application);
-		//String outputLoc = appService.uploadFile(fileDetail.getFileName(), uploadedInputStream, null);
+		Application outputLoc = appService.storeFile(fileDetail.getFileName(), uploadedInputStream, application);
 		
 		return Response.status(201).entity(outputLoc).build();
 	}

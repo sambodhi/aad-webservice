@@ -10,6 +10,7 @@ public class Application {
 	private String developrName;
 	private String description;
 	private String url;
+	private String iconUrl;
 	
 	public int getAppId() {
 		return appId;
@@ -59,6 +60,13 @@ public class Application {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	
+	public String getIconUrl() {
+		return iconUrl;
+	}
+	public void setIconUrl(String iconUrl) {
+		this.iconUrl = iconUrl;
+	}
 	public Application(int appId, int appCategId, int appTypeId,
 			String appName, String appSize, String developrName,
 			String description) {
@@ -85,7 +93,7 @@ public class Application {
 		return "Application [appId=" + appId + ", appCategId=" + appCategId
 				+ ", appTypeId=" + appTypeId + ", appName=" + appName
 				+ ", appSize=" + appSize + ", developrName=" + developrName
-				+ ", description=" + description + "]";
+				+ ", description=" + description +  ", iconUrl=" + iconUrl +"]";
 	}
 	
 	

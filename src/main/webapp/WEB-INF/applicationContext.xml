@@ -36,7 +36,11 @@
 	
 	<beans:bean id="testsService" class="com.aad.ws.service.TestsService" />
 	
-	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil" />
+	<beans:bean id="fileUtils" class="com.aad.ws.utils.FileUtil">
+		<beans:property name="possibleAppArchiveExts" value="${aad.ws.store.app.allowed.exe.file.types}"/>
+		<beans:property name="possibleAppIconExts" value="${aad.ws.store.app.allowed.icon.file.types}"/>
+		<beans:property name="downloadAppUrl" value="${aad.ws.store.download.app.url}"/>
+	</beans:bean>
 	
 	<beans:bean id="appDao" class="com.aad.ws.dao.JDBCApplicationDAO" />
 	

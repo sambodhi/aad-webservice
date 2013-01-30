@@ -15,6 +15,7 @@ import com.aad.ws.domain.Application;
 import com.aad.ws.domain.Category;
 import com.aad.ws.dto.AppCollection;
 import com.aad.ws.dto.AppDetails;
+import com.aad.ws.exception.InvalidAttribute;
 import com.aad.ws.utils.FileUtil;
 
 public class AppService {
@@ -35,25 +36,26 @@ public class AppService {
 	public void setStoreAppPath(String storeAppPath) {
 		this.storeAppPath = storeAppPath;
 	}
+	
 
-	public String storeFile(String fileName,
-			InputStream uploadedInputStream, Application application) {
-		
-		//save to database
-		appDao.createApplication(application);
+	public Application storeFile(String fileName,
+			InputStream uploadedInputStream, Application application) throws InvalidAttribute {
 		
 		Category category = categoryDao.getCategory(application.getAppCategId());
 		//save to file system
-		String outputLoc = uploadFile(fileName, uploadedInputStream, category);
+		Application app = uploadFile(fileName, uploadedInputStream, category, application);
 		
-		logger.debug("File copied to " + outputLoc);
-		return outputLoc;
+		//save to database
+		logger.debug("Inserting new app's details to database: " + app); 
+		appDao.createApplication(app);
+		
+		return app;
 	}
 	
-	public String uploadFile(String fileName,
-			InputStream uploadedInputStream, Category category) {
+	public Application uploadFile(String fileName,
+			InputStream uploadedInputStream, Category category, Application application) throws InvalidAttribute {
 		
-		logger.debug("File being upload: "+ fileName + " category: " + category);
+		logger.debug("File being upload: "+ fileName + " category: " + category + " application: " + application.getAppName());
 		
 		String categType= null;
 		if(category != null)
@@ -65,7 +67,7 @@ public class AppService {
 		// save it
 		try {
 			//util.createUserDir(uploadedFileLocation, category);
-			return util.writeToFile(uploadedInputStream, storeAppPath, fileName, categType);
+			return util.uploadFile(uploadedInputStream, storeAppPath, fileName, categType, application);
 		} catch (IOException e) {
 			logger.error("Error occurred while uploading file",e);
 		}
@@ -91,6 +93,8 @@ public class AppService {
 		appDetails.setDescription(application.getDescription());
 		appDetails.setName(application.getAppName());
 		appDetails.setUrl(application.getUrl());
+		appDetails.setIconUrl(application.getIconUrl());
+		appDetails.setDeveloper(application.getDeveloprName());
 		logger.debug("AppDetails : " + appDetails);
 		return appDetails;
 	}
