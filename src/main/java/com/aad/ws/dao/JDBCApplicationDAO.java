@@ -26,9 +26,9 @@ public class JDBCApplicationDAO implements
 
 	private static final String CREATE_APPLICATION_QUERY = "insert into application"
 			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url,icon_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url,:iconUrl)";
-	
-//	private static final String CREATE_APPLICATION_QUERY = "insert into application"
-//		+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
+
+	//private static final String CREATE_APPLICATION_QUERY = "insert into application"
+	//	+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
 
 	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId where app_id=:appId";
 	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
@@ -91,6 +91,7 @@ public class JDBCApplicationDAO implements
 			application.setAppTypeId(rs.getInt("app_type_id"));
 			application.setDescription(rs.getString("description"));
 			application.setUrl(rs.getString("app_url"));
+			application.setAppSize(rs.getString("app_size"));
 			application.setIconUrl(rs.getString("icon_url"));
 			application.setDeveloprName(rs.getString("developer_name"));
 			return application;

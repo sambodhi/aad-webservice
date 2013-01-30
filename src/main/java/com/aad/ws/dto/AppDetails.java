@@ -3,6 +3,7 @@ package com.aad.ws.dto;
 
 public class AppDetails {
 
+	private int id;
 	private String name;
 	private String url;
 	private String iconUrl;
@@ -11,6 +12,12 @@ public class AppDetails {
 	private String description;
 	private String developer;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

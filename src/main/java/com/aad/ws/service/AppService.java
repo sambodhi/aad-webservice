@@ -89,12 +89,14 @@ public class AppService {
 		logger.debug("Convert Application: " + application + " to AppDetails");
 		Category category = categoryDao.getCategory(application.getAppCategId());
 		logger.debug("Category :" + category);
+		appDetails.setId(application.getAppId());
 		appDetails.setCategoryName(category.getCategType());
 		appDetails.setDescription(application.getDescription());
 		appDetails.setName(application.getAppName());
 		appDetails.setUrl(application.getUrl());
 		appDetails.setIconUrl(application.getIconUrl());
 		appDetails.setDeveloper(application.getDeveloprName());
+		appDetails.setSize(application.getAppSize());
 		logger.debug("AppDetails : " + appDetails);
 		return appDetails;
 	}
