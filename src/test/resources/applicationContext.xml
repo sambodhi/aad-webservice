@@ -44,6 +44,10 @@
 	
 	<beans:bean id="appCategoryDao" class="com.aad.ws.dao.JDBCCategoryDAO" />
 	
+	<beans:bean id="uQuestionsService" class="com.add.ws.service.UQuestionsService" />
+	
+	<beans:bean id="userUQuestions" class="com.aad.ws.dao.JDBCUQestionsDAO" />
+	
 	<beans:bean class="com.aad.ws.exception.InvalidAttributeMapper" scope="singleton" />
 
 	<!-- bean to load datasource - jdbc pool -->
