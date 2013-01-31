@@ -51,9 +51,9 @@
 	<beans:bean id="resultDao" class="com.aad.ws.dao.JDBCResultDAO" />
 	<beans:bean id="resultService" class="com.aad.ws.service.submitResultService" />
 
-	<beans:bean id="uQuestionsService" class="com.add.ws.service.UQuestionsService" />
+	<beans:bean id="uQuestionsService" class="com.aad.ws.service.UQuestionsService" />
 
-	<beans:bean id="userUQuestions" class="com.aad.ws.dao.JDBCUQestionsDAO" />
+	<beans:bean id="questionsDao" class="com.aad.ws.dao.JDBCUQuestionsDAO" />
 
 	<beans:bean id="appCategory" class="com.aad.ws.dao.JDBCCategoryDAO" />
 

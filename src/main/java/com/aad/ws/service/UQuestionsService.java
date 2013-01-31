@@ -10,7 +10,6 @@ import com.aad.ws.dao.UQuestionsDAO;
 import com.aad.ws.domain.UQuestion;
 import com.aad.ws.domain.UserUQuestion;
 import com.aad.ws.dto.UQuestionsCollection;
-import com.aad.ws.dto.UserTestCollection;
 import com.aad.ws.dto.UserUQuestionsCollection;
 
 
