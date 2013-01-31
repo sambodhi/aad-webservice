@@ -35,7 +35,7 @@ public class AppResource {
 	@GET
 	@Path("{appId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public AppDetails getAppInfo(final @PathParam("appId") int id) {
+	public AppDetails getAppInfo(final @PathParam("appId") long id) {
 		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
 		AppDetails appDetails = appService.getAppDetails(id);
 		

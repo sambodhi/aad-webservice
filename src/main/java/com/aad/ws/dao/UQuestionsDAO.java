@@ -7,7 +7,7 @@ import com.aad.ws.domain.UserUQuestion;
 
 public interface UQuestionsDAO {
 
-	List<UQuestion> getUQuestionsForId(int id);
-	List<UserUQuestion> getUserUQuestionsForId(int id);
+	List<UQuestion> getUQuestionsForId(long id);
+	List<UserUQuestion> getUserUQuestionsForId(long id);
 
 }

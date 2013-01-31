@@ -24,7 +24,7 @@ public class JDBCUQuestionsDAO implements UQuestionsDAO{
 	@Qualifier("jdbcTemplate")
 	private NamedParameterJdbcTemplate jdbcTemplate;
 
-	public List<UQuestion> getUQuestionsForId(int id) {
+	public List<UQuestion> getUQuestionsForId(long id) {
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("testId", id);
 		List<UQuestion> tests = this.jdbcTemplate.query(
@@ -36,13 +36,13 @@ public class JDBCUQuestionsDAO implements UQuestionsDAO{
 	class QuestionsRowMapper implements RowMapper<UQuestion> {
 		public UQuestion mapRow(ResultSet rs, int rowNum) throws SQLException {
 			UQuestion question = new UQuestion();
-			question.setUQuestionId(rs.getInt("question_id"));
+			question.setUQuestionId(rs.getLong("question_id"));
 		
 			return question;
 		}
 	}
 	
-	public List<UserUQuestion> getUserUQuestionsForId(int id) {
+	public List<UserUQuestion> getUserUQuestionsForId(long id) {
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("questionId", id);
 		List<UserUQuestion> questionsStats= this.jdbcTemplate.query(
@@ -56,7 +56,6 @@ public class JDBCUQuestionsDAO implements UQuestionsDAO{
 			UserUQuestion question = new UserUQuestion();
 			question.setNumberOfClicks(rs.getInt("number_of_clicks"));
 			question.setTime(rs.getInt("time"));
-		
 			return question;
 		}
 	}

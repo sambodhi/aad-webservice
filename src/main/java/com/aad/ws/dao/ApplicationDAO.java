@@ -8,5 +8,5 @@ public interface ApplicationDAO {
 	Application createApplication(Application application);
 	List<Application> getApplication(Application value);
 	Application updateApplication(Application application);
-	List<Application> getApplicationForCategory(int id);
+	List<Application> getApplicationForCategory(long id);
 }

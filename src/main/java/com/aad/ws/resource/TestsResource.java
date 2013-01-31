@@ -1,8 +1,5 @@
 package com.aad.ws.resource;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -13,7 +10,6 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.aad.ws.dto.Test;
 import com.aad.ws.dto.TestsCollection;
 import com.aad.ws.service.TestsService;
 
@@ -29,28 +25,9 @@ public class TestsResource {
 	@GET
 	@Path("{testID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public TestsCollection getTests(final @PathParam("testID") int id){
-		//TODO: uncomment when database done
+	public TestsCollection getTests(final @PathParam("testID") long id){
 		TestsCollection tests = testsService.getTests(id); 
 		
-		//remove it!
-//		TestsCollection tests = new TestsCollection();
-//		
-//		List<Test> testList = new ArrayList<Test>();
-//		
-//		Test test1 = new Test();
-//		test1.setTestId(15);
-//		test1.setTestName("MathTest");
-//		
-//		Test test2 = new Test();
-//		test2.setTestId(16);
-//		test2.setTestName("BiologyTest");
-//		
-//		testList.add(test1);
-//		testList.add(test2);
-//		
-//		tests.setTest(testList);
-//		
 		return tests;
 	}
 }

@@ -27,8 +27,8 @@ public class JDBCApplicationDAO implements
 	private static final String CREATE_APPLICATION_QUERY = "insert into application"
 			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url,icon_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url,:iconUrl)";
 
-	//private static final String CREATE_APPLICATION_QUERY = "insert into application"
-	//	+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
+//	private static final String CREATE_APPLICATION_QUERY = "insert into application"
+//		+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
 
 	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId where app_id=:appId";
 	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
@@ -85,10 +85,10 @@ public class JDBCApplicationDAO implements
 	class ApplicationRowMapper implements RowMapper<Application> {
 		public Application mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Application application = new Application();
-			application.setAppId(rs.getInt("app_id"));
-			application.setAppCategId(rs.getInt("app_categ_id"));
+			application.setAppId(rs.getLong("app_id"));
+			application.setAppCategId(rs.getLong("app_categ_id"));
 			application.setAppName(rs.getString("app_name"));
-			application.setAppTypeId(rs.getInt("app_type_id"));
+			application.setAppTypeId(rs.getLong("app_type_id"));
 			application.setDescription(rs.getString("description"));
 			application.setUrl(rs.getString("app_url"));
 			application.setAppSize(rs.getString("app_size"));
@@ -98,7 +98,7 @@ public class JDBCApplicationDAO implements
 		}
 	}
 
-	public List<Application> getApplicationForCategory(int id) {
+	public List<Application> getApplicationForCategory(long id) {
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("categId", id);
 		List<Application> applicationList = this.jdbcTemplate.query(

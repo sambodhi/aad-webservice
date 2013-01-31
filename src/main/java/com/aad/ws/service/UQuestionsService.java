@@ -19,7 +19,7 @@ public class UQuestionsService {
 	private UQuestionsDAO questionsDao;
 	private static final Logger logger = Logger.getLogger(UQuestionsService.class);
 	
-	public UQuestionsCollection getQuestions(int id) {
+	public UQuestionsCollection getQuestions(long id) {
 		logger.debug("id :" + id);
 		List<UQuestion> questionsDomain = questionsDao.getUQuestionsForId(id);
 		logger.debug("questionsDomain :" + questionsDomain);
@@ -33,7 +33,7 @@ public class UQuestionsService {
 		return col;
 	}
 
-	public UserUQuestionsCollection getUserUQuestions(int id){
+	public UserUQuestionsCollection getUserUQuestions(long id){
 		logger.debug("id :" + id);
 		List<UserUQuestion> userQuestionsDomain = questionsDao.getUserUQuestionsForId(id);
 		logger.debug("userTests Domain Object :" + userQuestionsDomain);

@@ -2,14 +2,14 @@ package com.aad.ws.domain;
 
 public class Category {
 
-	private int categId;
+	private long categId;
 	private String categType;
 	
 	public String getCategType() {
 		return categType;
 	}
 
-	public int getCategId() {
+	public long getCategId() {
 		return categId;
 	}
 
@@ -17,7 +17,7 @@ public class Category {
 		this.categType = categType;
 	}
 
-	public void setCategId(int categId) {
+	public void setCategId(long categId) {
 		this.categId = categId;
 	}
 

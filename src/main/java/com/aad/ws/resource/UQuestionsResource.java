@@ -27,7 +27,7 @@ public class UQuestionsResource {
 	@GET
 	@Path("{testID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public UQuestionsCollection getUQuestions(final @PathParam("testID") int id){
+	public UQuestionsCollection getUQuestions(final @PathParam("testID") long id){
 		//TODO: uncomment when database done
 		UQuestionsCollection questions = questionsService.getQuestions(id); 
 		

@@ -18,7 +18,7 @@ public class TestsService {
 	private TestsDAO testsDao;
 	private static final Logger logger = Logger.getLogger(TestsService.class);
 	
-	public TestsCollection getTests(int id) {
+	public TestsCollection getTests(long id) {
 		logger.debug("id :" + id);
 		List<Test> testsDomain = testsDao.getTestsForId(id);
 		logger.debug("testsDomain :" + testsDomain);

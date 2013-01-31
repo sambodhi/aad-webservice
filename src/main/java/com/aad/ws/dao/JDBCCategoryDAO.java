@@ -22,7 +22,7 @@ public class JDBCCategoryDAO implements CategoryDAO {
 
 	private static final String SELECT_ALL_CATEGORY = "select * from app_category";
 	
-	public Category getCategory(int id) {
+	public Category getCategory(long id) {
 		Category category = null;
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("categId", id);
@@ -38,7 +38,7 @@ public class JDBCCategoryDAO implements CategoryDAO {
 	class CategoryRowMapper implements RowMapper<Category> {
 		public Category mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Category category = new Category();
-			category.setCategId(rs.getInt("app_categ_id"));
+			category.setCategId(rs.getLong("app_categ_id"));
 			category.setCategType(rs.getString("app_categ_type"));
 			return category;
 		}

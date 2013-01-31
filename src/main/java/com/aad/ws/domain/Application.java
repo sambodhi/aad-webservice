@@ -2,9 +2,9 @@ package com.aad.ws.domain;
 
 public class Application {
 	
-	private int appId;
-	private int appCategId;
-	private int appTypeId;
+	private long appId;
+	private long appCategId;
+	private long appTypeId;
 	private String appName;
 	private String appSize;
 	private String developrName;
@@ -12,22 +12,22 @@ public class Application {
 	private String url;
 	private String iconUrl;
 	
-	public int getAppId() {
+	public long getAppId() {
 		return appId;
 	}
-	public void setAppId(int appId) {
+	public void setAppId(long appId) {
 		this.appId = appId;
 	}
-	public int getAppCategId() {
+	public long getAppCategId() {
 		return appCategId;
 	}
-	public void setAppCategId(int appCategId) {
+	public void setAppCategId(long appCategId) {
 		this.appCategId = appCategId;
 	}
-	public int getAppTypeId() {
+	public long getAppTypeId() {
 		return appTypeId;
 	}
-	public void setAppTypeId(int appTypeId) {
+	public void setAppTypeId(long appTypeId) {
 		this.appTypeId = appTypeId;
 	}
 	public String getAppName() {
@@ -67,7 +67,7 @@ public class Application {
 	public void setIconUrl(String iconUrl) {
 		this.iconUrl = iconUrl;
 	}
-	public Application(int appId, int appCategId, int appTypeId,
+	public Application(long appId, long appCategId, long appTypeId,
 			String appName, String appSize, String developrName,
 			String description) {
 		super();
@@ -80,7 +80,7 @@ public class Application {
 		this.description = description;
 	}
 	
-	public Application(int appId) {
+	public Application(long appId) {
 		super();
 		this.appId = appId;
 	}

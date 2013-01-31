@@ -74,7 +74,7 @@ public class AppService {
 		return null;
 	}
 
-	public AppDetails getAppDetails(int id) {
+	public AppDetails getAppDetails(long id) {
 		logger.debug(">> getAppDetails >> id =" + id);
 		List<Application> apps = appDao.getApplication(new Application(id));
 		if(apps != null && apps.size() > 0){
@@ -101,7 +101,7 @@ public class AppService {
 		return appDetails;
 	}
 
-	public AppCollection getAppsForCategory(int id) {
+	public AppCollection getAppsForCategory(long id) {
 		List<Application> apps = appDao.getApplicationForCategory(id);
 		List<AppDetails> appsInfo = convertToAppDetailsList(apps);
 		AppCollection appCol = new AppCollection();

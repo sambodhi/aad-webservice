@@ -5,6 +5,6 @@ import java.util.List;
 import com.aad.ws.domain.Category;
 
 public interface CategoryDAO {
-	Category getCategory(int id);
+	Category getCategory(long id);
 	List<Category> getCategories();
 }
