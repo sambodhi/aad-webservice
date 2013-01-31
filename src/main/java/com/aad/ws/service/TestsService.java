@@ -42,7 +42,7 @@ public class TestsService {
 		return col;
 	}
 
-	public UserTestCollection getTestDetails(int id) {
+	public UserTestCollection getTestDetails(long id) {
 		logger.debug("id :" + id);
 		List<UserTest> userTestsDomain = testsDao.getUserTestsForId(id);
 		logger.debug("userTests Domain Object :" + userTestsDomain);
