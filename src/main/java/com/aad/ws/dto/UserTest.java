@@ -2,15 +2,15 @@ package com.aad.ws.dto;
 
 public class UserTest {
 	
-	private int testId;
+	private long testId;
 	private double score;
-	private int quesAttented;
+	private long quesAttented;
 	private double time;
 	
-	public int getTestId() {
+	public long getTestId() {
 		return testId;
 	}
-	public void setTestId(int testId) {
+	public void setTestId(long testId) {
 		this.testId = testId;
 	}
 	public double getScore() {
@@ -19,7 +19,7 @@ public class UserTest {
 	public void setScore(double score) {
 		this.score = score;
 	}
-	public int getQuesAttented() {
+	public long getQuesAttented() {
 		return quesAttented;
 	}
 	public void setQuesAttented(int quesAttented) {

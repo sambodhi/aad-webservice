@@ -23,7 +23,7 @@ public class JDBCTestsDAO implements TestsDAO{
 	@Qualifier("jdbcTemplate")
 	private NamedParameterJdbcTemplate jdbcTemplate;
 
-	public List<Test> getTestsForId(int id) {
+	public List<Test> getTestsForId(long id) {
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("appId", id);
 		List<Test> tests = this.jdbcTemplate.query(
@@ -35,13 +35,13 @@ public class JDBCTestsDAO implements TestsDAO{
 	class TestsRowMapper implements RowMapper<Test> {
 		public Test mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Test test = new Test();
-			test.setTestId(rs.getInt("test_id"));
+			test.setTestId(rs.getLong("test_id"));
 			test.setTestName(rs.getString("test_name"));
 			return test;
 		}
 	}
 	
-	public List<UserTest> getUserTestsForId(int id) {
+	public List<UserTest> getUserTestsForId(long id) {
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("testId", id);
 		List<UserTest> tests = this.jdbcTemplate.query(
@@ -53,7 +53,7 @@ public class JDBCTestsDAO implements TestsDAO{
 	class UserTestsRowMapper implements RowMapper<UserTest> {
 		public UserTest mapRow(ResultSet rs, int rowNum) throws SQLException {
 			UserTest test = new UserTest();
-			test.setTestId(rs.getInt("test_id"));
+			test.setTestId(rs.getLong("test_id"));
 			test.setScore(rs.getDouble("score"));
 			test.setQuesAttented(rs.getInt("ques_attended"));
 			test.setTime(rs.getDouble("time"));

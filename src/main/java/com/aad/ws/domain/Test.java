@@ -2,14 +2,14 @@ package com.aad.ws.domain;
 
 public class Test {
 	
-	private int testId;
+	private long testId;
 	private String testName;
 	
 	// setter and getters methods
-	public int getTestId() {
+	public long getTestId() {
 		return testId;
 	}
-	public void setTestId(int testId) {
+	public void setTestId(long testId) {
 		this.testId = testId;
 	}
 	public String getTestName() {
