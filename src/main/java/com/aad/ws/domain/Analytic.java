@@ -9,6 +9,7 @@ public class Analytic {
 	String correctanswer;
 	int questionid;
 	int clicks;
+	double totalmark;
 
 	public double getmark() {
 		return mark ;
@@ -52,4 +53,11 @@ public class Analytic {
 	public void setclicks (int Clicks) {
 		this.clicks = Clicks ;
 	}
+	public double gettotalmark() {
+		return totalmark;
+	}
+	public void settotalmark(double totalmark) {
+		this.totalmark = totalmark;
+	}
+	
 }

@@ -15,7 +15,7 @@ public class Results {
 		String teststarttime;
 		long testid;
 		long totaltime;
-		List<Analytic> questions;
+		List<Analytic> analytics;
 
 		public long gettotalquestions() {
 			return totalquestions;
@@ -72,10 +72,18 @@ public class Results {
 			this.totaltime = totaltime;
 		}
 		public List<Analytic> getquestions() {
-			return questions;
+			return analytics;
 		}
-		public void setquestions(List<Analytic> questions) {
-			this.questions = questions;
+		public void setquestions(List<Analytic> analytics) {
+			this.analytics = analytics;
+		}
+		
+		
+		public List<Analytic> getanalytics() {
+			return analytics;
+		}
+		public void setanalytics(List<Analytic> analytics) {
+			this.analytics = analytics;
 		}
 		/*
 		HashMap<String,Integer> selectedAnswer=new HashMap<String,Integer>();
@@ -91,7 +99,7 @@ public class Results {
 					+ ", overallscoreobtained=" + overallscoreobtained
 					+ ", difficulty=" + difficulty + ", appid=" + appid
 					+ ", teststarttime=" + teststarttime + ", testid=" + testid
-					+ ", totaltime=" + totaltime + ", questions=" + questions
+					+ ", totaltime=" + totaltime + ", questions=" + analytics
 					+ "]";
 		}
 		
