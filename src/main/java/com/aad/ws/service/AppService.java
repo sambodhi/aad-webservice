@@ -37,6 +37,14 @@ public class AppService {
 		this.storeAppPath = storeAppPath;
 	}
 	
+	
+	public Application createApplication(Application application) throws InvalidAttribute {
+		//save to database
+		logger.debug("Inserting new app's details to database: " + application); 
+		appDao.createApplication(application);
+		
+		return application;
+	}
 
 	public Application storeFile(String fileName,
 			InputStream uploadedInputStream, Application application) throws InvalidAttribute {
@@ -46,10 +54,9 @@ public class AppService {
 		Application app = uploadFile(fileName, uploadedInputStream, category, application);
 		
 		//save to database
-		logger.debug("Inserting new app's details to database: " + app); 
-		appDao.createApplication(app);
+		logger.debug("Updating app's details to database: " + app); 
+		return appDao.updateApplication(application);
 		
-		return app;
 	}
 	
 	public Application uploadFile(String fileName,
@@ -118,5 +125,13 @@ public class AppService {
 			}
 		}
 		return appDetailsList;
+	}
+
+
+	public boolean deleteFile(Application application) {
+		//delete application
+		logger.debug("Delete app from database: " + application); 
+		return appDao.deleteApplication(application);
+		
 	}
 }

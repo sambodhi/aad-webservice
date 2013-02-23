@@ -1,7 +1,6 @@
 package com.aad.ws.resource;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -43,13 +42,14 @@ public class AppResource {
 	}
 	
 	@POST
-	@Path("/upload")
+	@Path("/update")
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response uploadFile(
+	public Response updateApplication(
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail,
 			@FormDataParam("name") String name,
+			@FormDataParam("appId") long appId,
 			@FormDataParam("description") String description,
 			@FormDataParam("type") int typeId,
 			@FormDataParam("category") int categoryId,
@@ -65,7 +65,8 @@ public class AppResource {
 				", fileDetail =" + fileDetail +
 				", fileData (is null?) =" + (uploadedInputStream==null) +
 				", size =" + size +
-				", developer =" + developer);
+				", developer =" + developer+
+				", appId =" + appId);
 		
 		//validate request
 		if(uploadedInputStream == null){
@@ -90,12 +91,79 @@ public class AppResource {
 			 throw new InvalidAttribute("developer", "developer missing");
 		}
 		
+		Application application = new Application(appId, categoryId, typeId, name,  size, developer, description);
+		logger.debug("Application params received from request: " + application);
+		
+		Application app = appService.storeFile(fileDetail.getFileName(), uploadedInputStream, application);
+		if(app != null)
+			return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(app).build();
+		return Response.status(500).header("Access-Control-Allow-Origin", "*").entity("Updated Failed").build();
+	}
+	
+	@POST
+	@Path("/create")
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response createApplication(
+			@FormDataParam("name") String name,
+			@FormDataParam("description") String description,
+			@FormDataParam("type") int typeId,
+			@FormDataParam("category") int categoryId,
+			@FormDataParam("size") String size,
+			@FormDataParam("developer") String developer
+			) throws InvalidAttribute {
+
+		logger.debug("Parameters obtained from request: + " +
+				" name ="+ name +
+				", description =" + description +
+				", category =" + categoryId +
+				", type =" + typeId +
+				", size =" + size +
+				", developer =" + developer);
+		
+		//validate request
+		if(StringUtils.isEmpty(name)){
+			 throw new InvalidAttribute("name", "name missing");
+		}
+		if(StringUtils.isEmpty(description)){
+			 throw new InvalidAttribute("description", "description missing");
+		}
+		if(typeId == 0){
+			 throw new InvalidAttribute("type", "type missing");
+		}
+		if(categoryId == 0){
+			 throw new InvalidAttribute("category", "category missing");
+		}
+		if(StringUtils.isEmpty(developer)){
+			 throw new InvalidAttribute("developer", "developer missing");
+		}
+		
 		Application application = new Application(0, categoryId, typeId, name,  size, developer, description);
 		logger.debug("Application params received from request: " + application);
 		
-		Application outputLoc = appService.storeFile(fileDetail.getFileName(), uploadedInputStream, application);
+		Application app = appService.createApplication(application);
+		logger.info("Application Created With Id:"+app.getAppId());
+		return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(app).build();
+	}
+	
+	@POST
+	@Path("/delete")
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response deleteApplication(
+			@FormDataParam("appId") long appId
+			) throws InvalidAttribute {
+
+		logger.debug("Parameters obtained from request: + " +
+				", appId =" + appId);
+		Application application = new Application(appId);
+		logger.debug("Application params received from request: " + application);
 		
-		return Response.status(201).entity(outputLoc).build();
+		boolean deleteSuccess = appService.deleteFile(application);
+		logger.info("Delete Success:" + deleteSuccess);
+		if(deleteSuccess)
+			return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(application).build();
+		return Response.status(500).header("Access-Control-Allow-Origin", "*").entity("Delete Failed").build();
 	}
 	
 }

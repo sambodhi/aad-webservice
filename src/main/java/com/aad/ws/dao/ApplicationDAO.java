@@ -9,4 +9,5 @@ public interface ApplicationDAO {
 	List<Application> getApplication(Application value);
 	Application updateApplication(Application application);
 	List<Application> getApplicationForCategory(long id);
+	boolean deleteApplication(Application application);
 }

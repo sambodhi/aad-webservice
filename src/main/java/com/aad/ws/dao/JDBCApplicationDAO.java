@@ -17,8 +17,7 @@ import org.springframework.jdbc.support.KeyHolder;
 
 import com.aad.ws.domain.Application;
 
-public class JDBCApplicationDAO implements
-		ApplicationDAO {
+public class JDBCApplicationDAO implements ApplicationDAO {
 
 	@Autowired
 	@Qualifier("jdbcTemplate")
@@ -27,18 +26,24 @@ public class JDBCApplicationDAO implements
 	private static final String CREATE_APPLICATION_QUERY = "insert into application"
 			+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url,icon_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url,:iconUrl)";
 
-//	private static final String CREATE_APPLICATION_QUERY = "insert into application"
-//		+ "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
+	// private static final String CREATE_APPLICATION_QUERY =
+	// "insert into application"
+	// +
+	// "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
 
-	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId where app_id=:appId";
+	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId,app_name=:appName,app_size=:appSize,description=:description,developer_name=:developrName where app_id=:appId";
 	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
-	
+
 	private static final String SELECT_APPLICATION_FOR_CATEGORY_QUERY = "select * from application where app_categ_id=:categId";
 
-	private static final Logger logger = Logger.getLogger(JDBCApplicationDAO.class);
-	
+	private static final String DELETE_APPLICATION_QUERY = "delete from application where app_id=:appId";
+
+	private static final Logger logger = Logger
+			.getLogger(JDBCApplicationDAO.class);
+
 	public Application createApplication(Application application) {
-		logger.debug("JDBCApplicationDAO >> createApplication >> application :" + application);
+		logger.debug("JDBCApplicationDAO >> createApplication >> application :"
+				+ application);
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		SqlParameterSource namedParameters = new BeanPropertySqlParameterSource(
 				application);
@@ -53,7 +58,8 @@ public class JDBCApplicationDAO implements
 				return application;
 			}
 		} catch (Throwable e) {
-			logger.error("createApplication: error in creating new application" + e.getMessage(), e);
+			logger.error("createApplication: error in creating new application"
+					+ e.getMessage(), e);
 		}
 		return null;
 	}
@@ -73,15 +79,18 @@ public class JDBCApplicationDAO implements
 		try {
 			int noOfRowsUpdated = this.jdbcTemplate.update(
 					UPDATE_APPLICATION_QUERY, namedParameters);
-			// if (noOfRowsUpdated > 0)
-			// update successful
+			if (noOfRowsUpdated > 0) {
+				logger.info("No Of rows updated:" + noOfRowsUpdated);
+				return application;
+			}
 		} catch (Throwable e) {
-			logger.error("updateApplication: error in updating application" + e.getMessage(), e);
+			logger.error(
+					"updateApplication: error in updating application"
+							+ e.getMessage(), e);
 		}
 		return null;
 	}
 
-	
 	class ApplicationRowMapper implements RowMapper<Application> {
 		public Application mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Application application = new Application();
@@ -105,6 +114,24 @@ public class JDBCApplicationDAO implements
 				SELECT_APPLICATION_FOR_CATEGORY_QUERY, parameters,
 				new ApplicationRowMapper());
 		return applicationList;
+	}
+
+	public boolean deleteApplication(Application application) {
+		SqlParameterSource namedParameters = new BeanPropertySqlParameterSource(
+				application);
+		try {
+			int noOfRowsUpdated = this.jdbcTemplate.update(
+					DELETE_APPLICATION_QUERY, namedParameters);
+			if (noOfRowsUpdated > 0) {
+				logger.info("No Of rows updated:" + noOfRowsUpdated);
+				return true;
+			}
+		} catch (Throwable e) {
+			logger.error(
+					"updateApplication: error in updating application"
+							+ e.getMessage(), e);
+		}
+		return false;
 	}
 
 }
