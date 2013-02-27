@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.aad.ws.dao.ApplicationDAO;
 import com.aad.ws.dao.ResultDAO;
 import com.aad.ws.domain.Results;
+import com.aad.ws.exception.InvalidAttribute;
 import com.aad.ws.resource.ResultResource;
 
 
@@ -14,7 +15,7 @@ public class submitResultService {
 	private ResultDAO resultDao;
 	
 	private static final Logger logger = Logger.getLogger(submitResultService.class);
-	public Results subResults (Results res)
+	public Results subResults (Results res) throws InvalidAttribute
 	{
 		res=resultDao.submitResult(res);
 		return res;

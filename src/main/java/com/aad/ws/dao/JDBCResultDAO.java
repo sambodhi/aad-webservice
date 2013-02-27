@@ -23,6 +23,7 @@ import com.aad.ws.dto.UTest;
 import com.aad.ws.dto.UserQuestionTest;
 import com.aad.ws.dto.UserSession;
 import com.aad.ws.dto.subUserTest;
+import com.aad.ws.exception.InvalidAttribute;
 
 
 public class JDBCResultDAO implements ResultDAO{
@@ -46,6 +47,7 @@ public class JDBCResultDAO implements ResultDAO{
 	+"(user_session_id) values (:userSessionId)";
 	private static final String TEST_ID_EXIST= "select count(0) from test where test_id=:TEST_ID ";
 	private static final String QUESTION_ID_EXIST= "select count(0) from question where question_id=:QUESTION_ID ";
+	private static final String APPID_ID_EXIST= "select count(0) from application where app_id=:appid ";
 	
 	public UserSession createUserSession(UserSession user) {
 		
@@ -136,10 +138,21 @@ public class JDBCResultDAO implements ResultDAO{
 		return questionidno;		
 	}	
 	
+	public void AppIdExist (Results res) throws InvalidAttribute {
+		
+		SqlParameterSource namedParametersForAppIdExist = new BeanPropertySqlParameterSource(
+				res);
+		if (jdbcTemplate.queryForInt(APPID_ID_EXIST, namedParametersForAppIdExist) == 0)
+		{ throw new InvalidAttribute("appid", "appid doesn't exist in the system");
+		}
+	}	
 	
 	
 	
-	public Results submitResult(Results res) {
+	
+	public Results submitResult(Results res) throws InvalidAttribute {
+		
+		AppIdExist(res);
 		
 		logger.debug("Result :" + res);
 		
