@@ -49,13 +49,19 @@ public class AppService {
 	public Application storeFile(String fileName,
 			InputStream uploadedInputStream, Application application) throws InvalidAttribute {
 		
+		List<Application> apps = appDao.getApplication(application);
+		if(apps!= null && apps.size()>0)
+			application = apps.get(0);
+		else
+			throw new InvalidAttribute("appid", "app id:" + application.getAppId() + " is invalid or missing");
+		
 		Category category = categoryDao.getCategory(application.getAppCategId());
 		//save to file system
 		Application app = uploadFile(fileName, uploadedInputStream, category, application);
 		
 		//save to database
 		logger.debug("Updating app's details to database: " + app); 
-		return appDao.updateApplication(application);
+		return appDao.updateApplication(app);
 		
 	}
 	

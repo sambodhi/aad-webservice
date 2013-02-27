@@ -48,24 +48,24 @@ public class AppResource {
 	public Response updateApplication(
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail,
-			@FormDataParam("name") String name,
-			@FormDataParam("appId") long appId,
-			@FormDataParam("description") String description,
-			@FormDataParam("type") int typeId,
-			@FormDataParam("category") int categoryId,
-			@FormDataParam("size") String size,
-			@FormDataParam("developer") String developer
+			//@FormDataParam("name") String name,
+			@FormDataParam("appId") long appId
+			//@FormDataParam("description") String description,
+			//@FormDataParam("type") int typeId,
+			//@FormDataParam("category") int categoryId,
+			//@FormDataParam("size") String size,
+			//@FormDataParam("developer") String developer
 			) throws InvalidAttribute {
 
 		logger.debug("Parameters obtained from request: + " +
-				" name ="+ name +
-				", description =" + description +
-				", category =" + categoryId +
-				", type =" + typeId +
+				//" name ="+ name +
+				//", description =" + description +
+				//", category =" + categoryId +
+				//", type =" + typeId +
 				", fileDetail =" + fileDetail +
 				", fileData (is null?) =" + (uploadedInputStream==null) +
-				", size =" + size +
-				", developer =" + developer+
+				//", size =" + size +
+				//", developer =" + developer+
 				", appId =" + appId);
 		
 		//validate request
@@ -75,23 +75,23 @@ public class AppResource {
 		if(fileDetail == null){
 			 throw new InvalidAttribute("file", "fileDetail missing");
 		}
-		if(StringUtils.isEmpty(name)){
-			 throw new InvalidAttribute("name", "name missing");
+		if(appId<1){
+			 throw new InvalidAttribute("appId", "appId missing");
 		}
-		if(StringUtils.isEmpty(description)){
-			 throw new InvalidAttribute("description", "description missing");
-		}
-		if(typeId == 0){
-			 throw new InvalidAttribute("type", "type missing");
-		}
-		if(categoryId == 0){
-			 throw new InvalidAttribute("category", "category missing");
-		}
-		if(StringUtils.isEmpty(developer)){
-			 throw new InvalidAttribute("developer", "developer missing");
-		}
+//		if(StringUtils.isEmpty(description)){
+//			 throw new InvalidAttribute("description", "description missing");
+//		}
+//		if(typeId == 0){
+//			 throw new InvalidAttribute("type", "type missing");
+//		}
+//		if(categoryId == 0){
+//			 throw new InvalidAttribute("category", "category missing");
+//		}
+//		if(StringUtils.isEmpty(developer)){
+//			 throw new InvalidAttribute("developer", "developer missing");
+//		}
 		
-		Application application = new Application(appId, categoryId, typeId, name,  size, developer, description);
+		Application application = new Application(appId);
 		logger.debug("Application params received from request: " + application);
 		
 		Application app = appService.storeFile(fileDetail.getFileName(), uploadedInputStream, application);

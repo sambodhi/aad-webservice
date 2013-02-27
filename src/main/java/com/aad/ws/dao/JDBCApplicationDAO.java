@@ -31,7 +31,7 @@ public class JDBCApplicationDAO implements ApplicationDAO {
 	// +
 	// "(app_categ_id,app_type_id,app_name,app_size,developer_name,description,app_url) values(:appCategId,:appTypeId,:appName,:appSize,:developrName,:description,:url)";
 
-	private static final String UPDATE_APPLICATION_QUERY = "update application set app_categ_id=:appCategId,app_type_id=:appTypeId,app_name=:appName,app_size=:appSize,description=:description,developer_name=:developrName where app_id=:appId";
+	private static final String UPDATE_APPLICATION_QUERY = "update application set app_url=:url,icon_url=:iconUrl where app_id=:appId";
 	private static final String SELECT_APPLICATION_QUERY = "select * from application where app_id=:appId";
 
 	private static final String SELECT_APPLICATION_FOR_CATEGORY_QUERY = "select * from application where app_categ_id=:categId";
