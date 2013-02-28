@@ -49,7 +49,7 @@ public class AppResource {
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail,
 			//@FormDataParam("name") String name,
-			@FormDataParam("appId") long appId
+			@FormDataParam("appIDCreate") long appId
 			//@FormDataParam("description") String description,
 			//@FormDataParam("type") int typeId,
 			//@FormDataParam("category") int categoryId,
@@ -151,7 +151,7 @@ public class AppResource {
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response deleteApplication(
-			@FormDataParam("appId") long appId
+			@FormDataParam("appIDDelete") long appId
 			) throws InvalidAttribute {
 
 		logger.debug("Parameters obtained from request: + " +
