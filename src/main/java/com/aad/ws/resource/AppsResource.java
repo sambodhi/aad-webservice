@@ -5,6 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +26,12 @@ public class AppsResource {
 	@GET
 	@Path("{categoryId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public AppCollection getAppsForCategory(final @PathParam("categoryId") long id) {
+	public Response getAppsForCategory(final @PathParam("categoryId") long id) {
 		logger.debug("Resource >> App >> getAppDetails >> param: id= " + id);
 		//TODO:uncomment when database is accessible
 		AppCollection appsCol = appService.getAppsForCategory(id);
 		
-		return appsCol;
+		//return appsCol;
+		return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(appsCol).build();
 	}
 }

@@ -7,6 +7,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,7 +25,7 @@ public class CategoriesResource {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public CategoryCollection getCategories() {
+	public Response getCategories() {
 		//TODO: uncomment when database is reachable
 		CategoryCollection col = categoryService.getCategories(); 
 		
@@ -40,6 +41,7 @@ public class CategoriesResource {
 //		CategoryCollection col = new CategoryCollection();
 //		col.setCategories(categories);
 		
-		return col;
+		//return col;
+		return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(col).build();
 	}
 }

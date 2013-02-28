@@ -5,6 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,10 @@ public class TestsResource {
 	@GET
 	@Path("{testID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public TestsCollection getTests(final @PathParam("testID") long id){
+	public Response getTests(final @PathParam("testID") long id){
 		TestsCollection tests = testsService.getTests(id); 
 		
-		return tests;
+		//return tests;
+		return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(tests).build();
 	}
 }

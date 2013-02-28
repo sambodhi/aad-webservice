@@ -48,6 +48,6 @@ public class ResultResource {
 				
 		results=resultService.subResults(results);
 		
-		return Response.status(201).entity(results).build();
+		return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(results).build();
 	}
 }

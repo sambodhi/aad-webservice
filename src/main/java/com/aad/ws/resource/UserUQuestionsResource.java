@@ -7,6 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +28,10 @@ public class UserUQuestionsResource {
 	@GET
 	@Path("{questionID}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public UserUQuestionsCollection getUserUQuestions(final @PathParam("questionID") long id){
-		//TODO: uncomment when database done
+	public Response getUserUQuestions(final @PathParam("questionID") long id){
 		UserUQuestionsCollection questions = questionsService.getUserUQuestions(id); 
 		
-	
-		return questions;
+		//return questions;
+		return Response.status(201).header("Access-Control-Allow-Origin", "*").entity(questions).build();
 	}
 }
